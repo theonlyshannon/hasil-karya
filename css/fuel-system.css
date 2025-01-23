@@ -1,0 +1,153 @@
+/* navbar css */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  body {
+    padding-top: 12rem;
+    margin-top: 0;
+  }
+  nav,
+  .navbar {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-shadow: 0 25px 25px rgba(35, 35, 35, 0.04);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: 'poppins';
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    padding: 24px 80px;
+    width: 100%;
+  }
+  .navbar-brand {
+    padding-left: 2rem;
+  }
+  .navbar-nav {
+    flex-grow: 1;
+    justify-content: center;
+  }
+  .nav-item {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .navbar-brand img {
+    max-height: 90px;
+  }
+  .btn-primary {
+    margin-right: 2rem;
+  }
+  .btn-custom {
+    margin-right: 1rem;
+    background-color: #2E8C93;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-weight: normal;
+    display: inline-block;
+    min-width: 53px;
+  }
+  .btn-custom:hover {
+    background-color: #0f4141;
+    color: white;
+  }
+  
+  .navbar-nav,
+  .nav-item {
+    font-weight: bold;
+    color: #135155;
+  }
+  .dropdown-menu {
+    padding: 8px;
+    gap: 10px;
+  }
+  .dropdown-menu,
+  .dropdown-item {
+    color: #4a606b;
+    font-family: 'poppins';
+    font-size: 16px;
+    font-weight: normal;
+  }
+  /* navbar css end */
+
+  /* hero section start */
+  .hero-label {
+    font-size: 50px;
+    font-family: 'poppins';
+    font-weight: bold;
+    color: #000;
+    line-height: 1.4;
+    text-transform: capitalize;
+    margin: 1.5rem 0;
+  }
+    .hero-text {
+        font-size: 16px;
+        font-family: 'poppins';
+        font-weight: normal;
+        color: #5D5D5D;
+        line-height: 1.6;
+        margin: 1.5rem 0;
+    }
+  /* hero section end */
+
+  /* why use fuel system start */  
+  .number-circle {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(36, 39, 59, 0.16);
+    background: #FFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .line {
+    height: 1px; /* Ketebalan garis */
+    background-color: #DDDDDD; /* Warna garis */
+    width: 100%; /* Panjang garis */
+    margin: 20px 0; /* Spasi di sekitar garis (opsional) */
+}
+  /* why use fuel system end */
+
+    /* simonro feature section start */
+    .feature-text {
+        font-size: 16px; 
+        font-family: 'poppins'; 
+        color: #000; /* Warna teks */
+        line-height: 1.4; /* Spasi antar baris */
+        text-transform: capitalize; /* Ubah kapitalisasi teks */
+        margin: 1.5rem 0; /* Atur jarak atas dan bawah */
+    }
+    .card.card-feature {
+        font-size: 16px; 
+        font-family: 'poppins'; 
+        color: #000; 
+        line-height: 1.4; 
+        margin: 1.5rem 0; 
+        box-shadow: 23px 26px 137px -42px rgba(0,0,0,0.2);
+    }
+    .card-title {
+        font-weight: bold;
+    }
+    .card-text {
+        color: #5D5D5D;
+    }
+    .fuel-system-label {
+        font-size: 40px;
+        font-family: 'poppins';
+        font-weight: bold;
+        color: #000;
+        text-transform: capitalize;
+    }
+    .fuel-system-text {
+        font-size: 16px;
+        font-family: 'poppins';
+        font-weight: normal;
+        color: #5D5D5D;
+        line-height: 1.6;
+    }
+  /* simonro feature section end */
