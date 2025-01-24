@@ -1,3 +1,22 @@
+/* container spacing */
+.container-simonro{
+    margin-bottom: 10rem;
+}
+.container-ews{
+    margin-bottom: 7rem;
+}
+.container-feature{
+    margin-top: 5rem;
+}
+.container-benefit{
+    margin-bottom: 10rem;
+}
+.container-ews-tool{
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+}
+/* container spacing */
+
 /* navbar css */
 * {
     padding: 0px;
@@ -73,47 +92,48 @@
   /* navbar css end */
 
   /* hero section start */
-  .hero-label {
-    font-size: 50px;
-    font-family: 'poppins';
-    font-weight: bold;
-    color: #000;
-    line-height: 1.4;
-    text-transform: capitalize;
-    margin: 1.5rem 0;
+  .hero-text h2 {
+    font-size: 50px; /* Ubah ukuran teks */
+    font-family: 'poppins'; /* Ganti font */
+    font-weight: bold; /* Atur ketebalan teks */
+    color: #000; /* Warna teks */
+    line-height: 1.4; /* Spasi antar baris */
+    text-transform: capitalize; /* Ubah kapitalisasi teks */
+    margin: 1.5rem 0; /* Atur jarak atas dan bawah */
   }
-    .hero-text {
-        font-size: 16px;
-        font-family: 'poppins';
-        font-weight: normal;
-        color: #5D5D5D;
-        line-height: 1.6;
-        margin: 1.5rem 0;
-    }
+  .btn-hero-custom {
+    margin-right: 1rem;
+    background-color: #2E8C93;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    font-family: 'poppins'; 
+    padding: 10px 20px;
+    min-width: 53px;
+  }
+  .btn-admin-custom {
+    margin-right: 1rem;
+    color: #2E8C93;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'poppins'; 
+    padding: 10px 20px;
+    min-width: 53px;
+    border: 3px solid #2E8C93;
+    box-shadow: 19px 16px 143px -49px rgba(0,0,0,0.41);
+  }
+  .btn-admin-custom:hover {
+    background-color: rgba(46, 140, 147, 0.2); 
+    border: 3px solid #2E8C93;
+    color: #2E8C93;
+  }
+  .btn-hero-custom:hover {
+    background-color: #0f4141;
+    color: white;
+  }
   /* hero section end */
 
-  /* why use fuel system start */  
-  .number-circle {
-    width: 50px;
-    height: 50px;
-    border: 3px solid rgba(36, 39, 59, 0.16);
-    background: #FFF;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  .line {
-    height: 1px; /* Ketebalan garis */
-    background-color: #DDDDDD; /* Warna garis */
-    width: 100%; /* Panjang garis */
-    margin: 20px 0; /* Spasi di sekitar garis (opsional) */
-}
-  /* why use fuel system end */
-
-    /* simonro feature section start */
+  /* simonro feature section start */
     .feature-text {
         font-size: 16px; 
         font-family: 'poppins'; 
@@ -139,24 +159,59 @@
     .card-text {
         color: #5D5D5D;
     }
-    .fuel-system-label {
-        font-size: 40px;
-        font-family: 'poppins';
-        font-weight: bold;
-        color: #000;
-        text-transform: capitalize;
+    .card-title-feature {
+      font-size: 16px;
     }
-    .fuel-system-text {
-        font-size: 16px;
-        font-family: 'poppins';
-        font-weight: normal;
-        color: #5D5D5D;
-        line-height: 1.6;
+    .ews-text {
+      margin-top: 7rem;
+      font-family: 'poppins';
     }
   /* simonro feature section end */
 
-  /* usage fuel system start */
-  .card-usage {
+  /* benefit ews start */
+  .benefit-text {
+    font-size: 16px; 
+    font-family: 'poppins'; 
+    color: #000; /* Warna teks */
+    line-height: 1.4; /* Spasi antar baris */
+    text-transform: capitalize; /* Ubah kapitalisasi teks */
+    margin: 1.5rem 0; /* Atur jarak atas dan bawah */
+}
+.number-circle {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;  
+  }
+  .card-benefit {
+    font-size: 16px; 
+    font-family: 'poppins'; 
+    color: #000; 
+    line-height: 1.4; 
+    margin: 1.5rem 0; 
+    box-shadow: 23px 26px 137px -42px rgba(0,0,0,0.2);
+    background-color: #F9FCED;
+    border: none; 
+    outline: none;
+    border-radius: 16px;
+}
+  /* benefit ews end */
+
+  .ews-tool-text {
+    font-size: 40px; 
+    font-family: 'poppins'; 
+    color: #24273B;
+    line-height: 1.4;
+    text-transform: capitalize; 
+}
+
+/* usage ews start */
+.card-usage {
     font-size: 16px; 
     font-family: 'poppins';
     box-shadow: 23px 26px 137px -42px rgba(0,0,0,0.2); 
@@ -167,7 +222,7 @@
 .usage-text {
     font-size: 16px; 
     font-family: 'poppins'; 
-    color: #24273B; /* Warna teks */
+    color: #000; /* Warna teks */
     line-height: 1.4; /* Spasi antar baris */
     text-transform: capitalize; /* Ubah kapitalisasi teks */
     margin: 1.5rem 0; /* Atur jarak atas dan bawah */
@@ -194,15 +249,11 @@
     width: 350px;
     height: 80px;
     border-top-right-radius: 12px;
-    background: #A9F02E;
+    background: #42AEFB;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     font-weight: normal;  
   }
-  .img-usage-fuel{
-    margin-top: 7rem;
-    margin-bottom: 7rem;
-  }
-  /* usage fuel system end */
+/* usage ews end */
