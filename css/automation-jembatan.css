@@ -3,7 +3,15 @@
     margin-top: 10rem;
     margin-bottom: 10rem;
 }
-/* container sizing */
+.container-brigde {
+  margin-bottom: 10rem;
+}
+.container-usage {
+  margin-top: 10rem;
+}
+.container-hero {
+  padding: 3rem;
+}
 
 /* container spacing */
 .container-simonro{
@@ -74,6 +82,7 @@
     font-weight: normal;
     display: inline-block;
     min-width: 53px;
+    padding: 12px 18px;
   }
   .btn-custom:hover {
     background-color: #0f4141;
@@ -99,11 +108,19 @@
   /* navbar css end */
 
   /* hero section start */
-  .hero-text h2 {
+  .hero-label {
     font-size: 40px; /* Ubah ukuran teks */
     font-family: 'poppins'; /* Ganti font */
     font-weight: bold; /* Atur ketebalan teks */
     color: #000; /* Warna teks */
+    line-height: 1.4; /* Spasi antar baris */
+    text-transform: capitalize; /* Ubah kapitalisasi teks */
+    margin: 1.5rem 0; /* Atur jarak atas dan bawah */
+  }
+  .hero-text {
+    font-size: 16px; /* Ubah ukuran teks */
+    font-family: 'poppins'; /* Ganti font */
+    color: #24273B; /* Warna teks */
     line-height: 1.4; /* Spasi antar baris */
     text-transform: capitalize; /* Ubah kapitalisasi teks */
     margin: 1.5rem 0; /* Atur jarak atas dan bawah */
@@ -193,7 +210,7 @@
     font-weight: bold;
   }
   .line-list {
-    height: 1px; /* Ketebalan garis */
+    height: 1.5px; /* Ketebalan garis */
     background-color: #DDDDDD; /* Warna garis */
     width: 100%; /* Panjang garis */
     margin: 20px 0; /* Spasi di sekitar garis (opsional) */
@@ -212,14 +229,20 @@
     text-transform: capitalize; /* Ubah kapitalisasi teks */
     margin: 1.5rem 0; /* Atur jarak atas dan bawah */
   }
-    .card-usage {
-        font-size: 16px; 
-        font-family: 'poppins';
-        box-shadow: 23px 26px 137px -42px rgba(0,0,0,0.2); 
-        border: none; 
-        outline: none;
-        border-radius: 16px;
-    }
+  .card-usage {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 23px 26px 137px -42px rgba(0, 0, 0, 0.2);
+    border: none;
+    outline: none;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-usage:hover {
+    transform: translateY(-10px);
+    box-shadow:  23px 45px 137px -42px rgba(0, 0, 0, 0.35);
+}
     .usage-text {
         font-size: 16px; 
         font-family: 'poppins'; 
@@ -285,27 +308,34 @@
     background-repeat: no-repeat; 
 }
 .card-body-interest {
-  margin-top: 7rem;
+  margin-top: 4rem;
 }
 .container-interest {
   margin-top: 10rem;
   margin-bottom: 10rem;
 }
-.card-title {
+.card-title-interest {
+  font-size: 30px;
   font-weight: bold;
 }
   /* interested product end */
 
   .card-automation-bridge {
-    font-size: 16px; 
-    font-family: 'poppins'; 
-    color: #000; 
-    line-height: 1.4; 
-    margin: 1.5rem 0; 
-    box-shadow: 23px 26px 137px -42px rgba(0,0,0,0.2);
-    border: none; 
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    line-height: 1.4;
+    margin: 1.5rem 0;
+    box-shadow: 23px 26px 137px -42px rgba(0, 0, 0, 0.17);
+    border: none;
     outline: none;
     border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-automation-bridge:hover {
+    transform: translateY(-10px);
+    box-shadow: 23px 45px 137px -42px rgba(0, 0, 0, 0.35);
 }
 
 .automation-bridge-label {

@@ -5,14 +5,15 @@
 .container-ews{
     margin-bottom: 7rem;
 }
-.container-feature{
+/* .container-feature{
     margin-top: 5rem;
-}
-.container-benefit{
+    margin-top: 10rem;
+} */
+.container-benefit-ews{
     margin-bottom: 10rem;
 }
 .container-ews-tool{
-    margin-top: 5rem;
+    margin-top: 10rem;
     margin-bottom: 10rem;
 }
 /* container spacing */
@@ -67,6 +68,7 @@
     font-weight: normal;
     display: inline-block;
     min-width: 53px;
+    padding: 12px 18px;
   }
   .btn-custom:hover {
     background-color: #0f4141;
@@ -122,6 +124,10 @@
     border: 3px solid #2E8C93;
     box-shadow: 19px 16px 143px -49px rgba(0,0,0,0.41);
   }
+  .ews-hero-image {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+  }
   .btn-admin-custom:hover {
     background-color: rgba(46, 140, 147, 0.2); 
     border: 3px solid #2E8C93;
@@ -143,22 +149,29 @@
         margin: 1.5rem 0; /* Atur jarak atas dan bawah */
     }
     .card-feature {
-        font-size: 16px; 
-        font-family: 'poppins'; 
-        color: #000; 
-        line-height: 1.4; 
-        margin: 1.5rem 0; 
-        box-shadow: 23px 26px 137px -42px rgba(0,0,0,0.2);
-        border: none; 
-        outline: none;
-        border-radius: 16px;
-    }
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+      color: #000;
+      line-height: 1.4;
+      margin: 1.5rem 0;
+      box-shadow: 23px 26px 137px -42px rgba(0, 0, 0, 0.17);
+      border: none;
+      outline: none;
+      border-radius: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 23px 50px 137px -42px rgba(0, 0, 0, 0.35);
+  }
+  
     .card-title {
         font-weight: bold;
     }
-    .card-text {
+    /* .card-text {
         color: #5D5D5D;
-    }
+    } */
     .card-title-feature {
       font-size: 16px;
     }
@@ -189,17 +202,23 @@
     font-weight: bold;  
   }
   .card-benefit {
-    font-size: 16px; 
-    font-family: 'poppins'; 
-    color: #000; 
-    line-height: 1.4; 
-    margin: 1.5rem 0; 
-    box-shadow: 23px 26px 137px -42px rgba(0,0,0,0.2);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    line-height: 1.4;
+    margin: 1.5rem 0;
+    box-shadow: 23px 26px 137px -42px rgba(0, 0, 0, 0.17);
     background-color: #F9FCED;
-    border: none; 
+    border: none;
     outline: none;
     border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.card-benefit:hover {
+    transform: translateY(-10px);
+    box-shadow: 23px 50px 137px -42px rgba(0, 0, 0, 0.35);
+}
+
   /* benefit ews end */
 
   .ews-tool-text {
@@ -212,13 +231,20 @@
 
 /* usage ews start */
 .card-usage {
-    font-size: 16px; 
-    font-family: 'poppins';
-    box-shadow: 23px 26px 137px -42px rgba(0,0,0,0.2); 
-    border: none; 
-    outline: none;
-    border-radius: 16px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 23px 26px 137px -42px rgba(0, 0, 0, 0.17);
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.card-usage:hover {
+  transform: translateY(-10px);
+  box-shadow: 23px 50px 137px -42px rgba(0, 0, 0, 0.35);
+}
+
 .usage-text {
     font-size: 16px; 
     font-family: 'poppins'; 
@@ -279,6 +305,11 @@
 .container-interest {
   margin-top: 10rem;
   margin-bottom: 10rem;
+}
+.card-interest-title {
+  font-size: 25px;
+  font-family: 'poppins';
+  font-weight: bold;
 }
   /* interested product end */
 

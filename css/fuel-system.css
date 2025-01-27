@@ -60,6 +60,7 @@
     font-weight: normal;
     display: inline-block;
     min-width: 53px;
+    padding: 12px 18px;
   }
   .btn-custom:hover {
     background-color: #0f4141;
@@ -135,22 +136,28 @@
         margin: 1.5rem 0; /* Atur jarak atas dan bawah */
     }
     .card-feature {
-        font-size: 16px; 
-        font-family: 'poppins'; 
-        color: #000; 
-        line-height: 1.4; 
-        margin: 1.5rem 0; 
-        box-shadow: 23px 26px 137px -42px rgba(0,0,0,0.2);
-        border: none; 
-        outline: none;
-        border-radius: 16px;
-    }
-    .card-title {
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+      color: #000;
+      line-height: 1.4;
+      margin: 1.5rem 0;
+      box-shadow: 23px 26px 137px -42px rgba(0, 0, 0, 0.17);
+      border: none;
+      outline: none;
+      border-radius: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 23px 50px 137px -42px rgba(0, 0, 0, 0.35);
+  }
+    /* .card-title {
         font-weight: bold;
-    }
-    .card-text {
+    } */
+    /* .card-text {
         color: #5D5D5D;
-    }
+    } */
     .fuel-system-label {
         font-size: 40px;
         font-family: 'poppins';
@@ -172,13 +179,19 @@
 
   /* usage fuel system start */
   .card-usage {
-    font-size: 16px; 
-    font-family: 'poppins';
-    box-shadow: 23px 26px 137px -42px rgba(0,0,0,0.2); 
-    border: none; 
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 23px 26px 137px -42px rgba(0, 0, 0, 0.17);
+    border: none;
     outline: none;
     border-radius: 16px;
-}
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-usage:hover {
+    transform: translateY(-10px);
+    box-shadow: 23px 50px 137px -42px rgba(0, 0, 0, 0.35);
+  }
 .usage-text {
     font-size: 16px; 
     font-family: 'poppins'; 
@@ -253,7 +266,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 1rem;
 }
 
 .footer-check-container {

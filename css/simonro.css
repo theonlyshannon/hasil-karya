@@ -56,6 +56,7 @@
     font-weight: normal;
     display: inline-block;
     min-width: 53px;
+    padding: 12px 18px;
   }
   .btn-custom:hover {
     background-color: #0f4141;
@@ -170,7 +171,12 @@
       border: none; 
       outline: none;
       border-radius: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+  .card-benefit-yellow:hover {
+    transform: translateY(-10px);
+    box-shadow: 23px 26px 137px -42px rgba(0, 0, 0, 0.17);
+}
     .card-benefit-purple {
       font-size: 16px; 
       font-family: 'poppins'; 
@@ -181,7 +187,12 @@
       border: none; 
       outline: none;
       border-radius: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+  .card-benefit-purple:hover {
+    transform: translateY(-10px);
+    box-shadow: 23px 26px 137px -42px rgba(0, 0, 0, 0.17);
+}
     .card-benefit-orange {
       font-size: 16px; 
       font-family: 'poppins'; 
@@ -192,7 +203,12 @@
       border: none; 
       outline: none;
       border-radius: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+  .card-benefit-orange:hover {
+    transform: translateY(-10px);
+    box-shadow: 23px 26px 137px -42px rgba(0, 0, 0, 0.17);
+}
     /* benefit simonro end */
 
   /* simonro feature section start */
@@ -205,16 +221,22 @@
         margin: 1.5rem 0; /* Atur jarak atas dan bawah */
     }
     .card-feature {
-        font-size: 16px; 
-        font-family: 'poppins'; 
-        color: #000; 
-        line-height: 1.4; 
-        margin: 1.5rem 0; 
-        box-shadow: 23px 26px 137px -42px rgba(0,0,0,0.2);
-        border: none; 
-        outline: none;
-        border-radius: 16px;
-    }
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+      color: #000;
+      line-height: 1.4;
+      margin: 1.5rem 0;
+      box-shadow: 23px 26px 137px -42px rgba(0, 0, 0, 0.17);
+      border: none;
+      outline: none;
+      border-radius: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 23px 50px 137px -42px rgba(0, 0, 0, 0.35);
+  }
     .card-title {
         font-weight: bold;
     }
