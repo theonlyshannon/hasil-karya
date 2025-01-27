@@ -252,3 +252,44 @@
 }
 /* product section end */
   
+
+  /* footer section start */
+  .card-footer {
+    padding: 2rem;
+    font-size: 16px;
+    font-family: 'Poppins';
+    color: #fff;
+    background-image: url('../public/footer-image.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  
+  .call-center {
+    text-align: right;
+  }
+  
+  .footer-circle-check {
+    width: 25px;
+    height: 25px;
+    background-color: #00D47E;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+  }
+  
+  .footer-check-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Poppins';
+  }
+  /* footer section end */
