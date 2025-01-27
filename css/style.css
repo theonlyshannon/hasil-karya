@@ -72,6 +72,75 @@
   }
   /* navbar css end */
 
+  /* client section start */
+  .client-text {
+    font-family: 'poppins';  
+    color:  #24273B; 
+    font-size: 16px; 
+  }
+  .card-client {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    position: relative;
+    border: none; 
+    outline: none;
+    border-radius: 16px;
+  }
+  .card-client-pp {
+    background: #ffff;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    position: relative;
+    border: none; 
+    outline: none;
+    border-radius: 16px;
+    box-shadow: -1px 31px 146px -65px rgba(0,0,0,0.51);
+  }
+  .client-list .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+  /* client section end */
+
+  /* featured product section start */
+  .container-featured-product {
+    background-color: #F2F4F3;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: 1920px;
+    height: 500px;
+  }
+  .featured-product-text {
+    font-family: 'poppins';  
+    color:  #24273B; 
+    font-size: 16px; 
+  }
+  .card-featured-product {
+    background: #fff;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    position: relative;
+    border: none; 
+    outline: none;
+    border-radius: 16px;
+  }
+  /* featured product section end */
+
 /* product section start */
 .container-product {
   max-width: 1200px;
@@ -93,6 +162,9 @@
   margin-top: 4rem;
   margin-bottom: 4rem;
   position: relative;
+  border: none; 
+  outline: none;
+  border-radius: 16px;
 }
 
 .number-circle {
@@ -170,6 +242,7 @@
   text-align: center;   
   color:  #2E8C93; 
   background-color: rgba(46, 140, 147, 0.08); 
+  border: 3px solid #2E8C93;
   border-radius: 10px; 
 }
 .btn-card-custom:hover {

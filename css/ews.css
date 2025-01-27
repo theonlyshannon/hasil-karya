@@ -257,3 +257,27 @@
     font-weight: normal;  
   }
 /* usage ews end */
+
+  /* interested product start */
+  .card-interest {
+    font-size: 16px; 
+    font-family: 'poppins'; 
+    color: #000; 
+    line-height: 1.4; 
+    margin: 1.5rem 0; 
+    background-color: #F2F2F2;
+    border: none; 
+    outline: none;
+    border-radius: 16px;
+    height: 400px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.card-body-interest {
+  margin-top: 5rem;
+}
+.container-interest {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+  /* interested product end */
