@@ -8,6 +8,9 @@
 .container-feature {
   margin-bottom: 10rem;
 }
+.container-usage-fuel {
+  margin-bottom: 10rem;
+}
 /* sizing container end */
 
 /* navbar css */
@@ -242,7 +245,7 @@
   font-size: 16px;
   font-family: 'Poppins';
   color: #fff;
-  background-image: url('../public/footer-image.png');
+  background-image: url('../public/footer.png');
   background-size: cover;
   background-position: center;
 }

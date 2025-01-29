@@ -171,7 +171,7 @@
     }
     /* .card-text {
         color: #5D5D5D;
-    } */
+    } */  
     .card-title-feature {
       font-size: 16px;
     }
@@ -221,12 +221,67 @@
 
   /* benefit ews end */
 
-  .ews-tool-text {
+  .ews-tool-label {
     font-size: 40px; 
     font-family: 'poppins'; 
     color: #24273B;
     line-height: 1.4;
     text-transform: capitalize; 
+}
+  .ews-tool-text {
+    font-size: 16px; 
+    font-family: 'poppins'; 
+    color: #5D5D5D;
+    line-height: 1.4;
+    text-transform: capitalize; 
+}
+.component-card {
+  height: 100%;
+  background-color: #f8f8ff;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+.component-card-box {
+  height: 100%;
+  padding:;
+  background-color: #f8f8ff;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+
+.component-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.component-image {
+  height: 200px;
+  object-fit: contain;
+  padding: 20px;
+}
+
+.component-label {
+  background-color: #ffd700;
+  color: #000;
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 0 0 8px 8px;
+}
+
+.main-title {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.main-title:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #ffd700;
+  margin: 15px auto 0;
+  border-radius: 2px;
 }
 
 /* usage ews start */
@@ -313,13 +368,13 @@
 }
   /* interested product end */
 
-  /* footer section start */
+/* footer section start */
 .card-footer {
   padding: 2rem;
   font-size: 16px;
   font-family: 'Poppins';
   color: #fff;
-  background-image: url('../public/footer-image.png');
+  background-image: url('../public/footer.png');
   background-size: cover;
   background-position: center;
 }
@@ -343,7 +398,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 1rem;
 }
 
 .footer-check-container {

@@ -1,7 +1,7 @@
 /* container sizing */
 .container-benefit-simonro {
-  margin-top: 10rem;
-
+  margin-top: 5rem;
+  margin-bottom: 7rem;
 }
 /* container sizing */
 
@@ -82,11 +82,19 @@
   /* navbar css end */
 
   /* hero section start */
-  .hero-text h2 {
+  .hero-label h2 {
     font-size: 50px; /* Ubah ukuran teks */
     font-family: 'poppins'; /* Ganti font */
     font-weight: bold; /* Atur ketebalan teks */
     color: #000; /* Warna teks */
+    line-height: 1.4; /* Spasi antar baris */
+    text-transform: capitalize; /* Ubah kapitalisasi teks */
+    margin: 1.5rem 0; /* Atur jarak atas dan bawah */
+  }
+  .hero-label p {
+    font-size: 16px; /* Ubah ukuran teks */
+    font-family: 'poppins'; /* Ganti font */
+    color: #5D5D5D; /* Warna teks */
     line-height: 1.4; /* Spasi antar baris */
     text-transform: capitalize; /* Ubah kapitalisasi teks */
     margin: 1.5rem 0; /* Atur jarak atas dan bawah */
@@ -121,7 +129,84 @@
     background-color: #0f4141;
     color: white;
   }
+  .hero-img {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+  }
   /* hero section end */
+
+  /* usage section start */
+  .usage-text {
+    font-size: 16px; 
+    font-family: 'poppins'; 
+    color: #000; /* Warna teks */
+    line-height: 1.4; /* Spasi antar baris */
+    text-transform: capitalize; /* Ubah kapitalisasi teks */
+    margin: 1.5rem 0; /* Atur jarak atas dan bawah */
+}
+.card-usage {
+  font-size: 16px; 
+  font-family: 'poppins'; 
+  color: #000; 
+  line-height: 1.4; 
+  margin: 1.5rem 0; 
+  background-color: #F2F2F2;
+  border: none; 
+  outline: none;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.card-usage-text {
+  display: flex;
+  flex-direction: column; /* Menyusun teks dalam kolom */
+}
+.feature-card {
+  background-color: #f8f9fa;
+  padding: 24px;
+  border-radius: 8px;
+  max-width: 600px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* .icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #FFD700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+} */
+
+.text-content {
+  flex: 1;
+}
+
+.title {
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.description {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+  /* usage section end */
 
     /* benefit simonro start */
     .vendor-label {
@@ -142,6 +227,138 @@
       border-radius: 16px;
       box-shadow: 23px 26px 137px -42px rgba(0,0,0,0.2);
     }
+    .operator-label {
+      background: #fff;
+      width: fit-content;
+      height: 50px;
+      padding: 1rem;
+      border-radius: 16px;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 4px 30px 115px -1px rgba(0,0,0,0.15);
+  }
+  .operator-text {
+      font-size: 14px;
+      background: #fff;
+      width: 500px;
+      padding: 16px;
+      height: 70px;
+      border-radius: 16px;
+      box-shadow: 4px 30px 115px -1px rgba(0,0,0,0.1);
+      margin-left: 7rem; 
+      margin-top: 20px;
+  }
+  .operator-text .highlight {
+      color: #FFA000;
+      font-weight: bold;
+  }
+  .gate-bridge-label {
+    background: #fff;
+    width: fit-content;
+    height: 50px;
+    padding: 1rem;
+    border-radius: 16px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 4px 30px 115px -1px rgba(0,0,0,0.25);
+  }
+  .gate-bridge-text {
+    background: #fff;
+    height: 60px;
+    padding: 1rem;
+    border-radius: 16px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 4px 30px 115px -1px rgba(0,0,0,0.15);
+    margin-top: 40px;
+  }
+  .admin-label {
+    background: #fff;
+    width: fit-content;
+    height: 50px;
+    padding: 1rem;
+    border-radius: 16px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 4px 30px 115px -1px rgba(0,0,0,0.25);
+  }
+  .admin-text {
+    background: #fff;
+    width: fit-content;
+    height: 50px;
+    padding: 1rem;
+    border-radius: 16px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 4px 30px 115px -1px rgba(0,0,0,0.25);
+    margin-top: 20px;
+    margin-left: 4rem;
+  }
+  .manager-label {
+    background: #fff;
+    width: fit-content;
+    height: 50px;
+    padding: 1rem;
+    border-radius: 16px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 4px 30px 115px -1px rgba(0,0,0,0.25);
+  }
+  .vendor-label {
+    background: #fff;
+    width: fit-content;
+    height: 50px;
+    padding: 1rem;
+    border-radius: 16px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 4px 30px 115px -1px rgba(0,0,0,0.25);
+    margin-left: 5rem;
+  }
+  .vendor-text {
+    background: #fff;
+    width: fit-content;
+    height: 50px;
+    padding: 1rem;
+    border-radius: 16px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 4px 30px 115px -1px rgba(0,0,0,0.25);
+    margin-top: 20px;
+    margin-left: 3rem;
+  }
+  .footer-yellow {
+    margin-top: 2rem;
+  }
+  .footer-purple {
+    margin-top: 4rem;
+  }
+  .footer-admin {
+    margin-top: 2rem;
+  }
+  .footer-manager {
+    margin-top: 5rem;
+  }
+  .footer-vendor {
+    margin-top: 1.5rem;
+  }
     .benefit-text {
       font-size: 16px; 
       font-family: 'poppins'; 
@@ -240,10 +457,44 @@
     .card-title {
         font-weight: bold;
     }
-    .card-text {
+    /* .card-text {
         color: #5D5D5D;
-    }
+    } */
   /* simonro feature section end */
+
+    /* interested product start */
+    .card-interest {
+      font-size: 16px; 
+      font-family: 'poppins'; 
+      color: #000; 
+      line-height: 1.4; 
+      margin: 1.5rem 0; 
+      background-color: #F2F2F2;
+      border: none; 
+      outline: none;
+      border-radius: 16px;
+      height: 400px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+  .card-body-interest {
+    margin-top: 5rem;
+  }
+  .container-interest {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+  .card-interest-title {
+    font-size: 25px;
+    font-family: 'poppins';
+    font-weight: bold;
+  }
+  .card-interest-img img {
+    width: 650px;
+    height: 400px;
+    margin-left: 12.5rem;
+  }
+    /* interested product end */
 
 /* footer section start */
 .card-footer {
@@ -251,7 +502,7 @@
   font-size: 16px;
   font-family: 'Poppins';
   color: #fff;
-  background-image: url('../public/footer-image.png');
+  background-image: url('../public/footer.png');
   background-size: cover;
   background-position: center;
 }
@@ -275,7 +526,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 1rem;
 }
 
 .footer-check-container {

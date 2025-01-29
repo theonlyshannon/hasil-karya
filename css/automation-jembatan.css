@@ -373,7 +373,7 @@
   font-size: 16px;
   font-family: 'Poppins';
   color: #fff;
-  background-image: url('../public/footer-image.png');
+  background-image: url('../public/footer.png');
   background-size: cover;
   background-position: center;
 }
@@ -397,7 +397,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 1rem;
 }
 
 .footer-check-container {

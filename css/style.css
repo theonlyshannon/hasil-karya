@@ -117,7 +117,7 @@
 
   /* featured product section start */
   .container-featured-product {
-    background-color: #F2F4F3;
+    /* background-color: #F2F4F3; */
     margin-top: 4rem;
     margin-bottom: 4rem;
     width: 1920px;
@@ -129,17 +129,85 @@
     font-size: 16px; 
   }
   .card-featured-product {
-    background: #fff;
+    background: #F2F4F3 ;
     border-radius: 20px;
     padding: 1rem;
     margin-top: 2rem;
     margin-bottom: 4rem;
-    position: relative;
     border: none; 
     outline: none;
     border-radius: 16px;
   }
+  .button-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #2E8C93;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan efek bayangan */
+    border: 3px solid rgba(88, 160, 163, 0.3); /* Warna lingkaran luar transparan */
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .button-circle:hover {
+    background-color: #4d9195; /* Warna saat hover */
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-product {
+    display: flex;
+    gap:10rem;
+    justify-content: center;
+    align-items: center;
+  }
   /* featured product section end */
+
+  /* featured civil product section start */
+  .container-featured-product {
+    /* background-color: #F2F4F3; */
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: 1920px;
+    height: 500px;
+  }
+  .featured-product-text {
+    font-family: 'poppins';  
+    color:  #24273B; 
+    font-size: 16px; 
+  }
+  .card-civil-product {
+    background: #F2F4F3 ;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    border: none; 
+    outline: none;
+    border-radius: 16px;
+  }
+  .glassmorphic-text {
+    position: absolute;
+    font-size: 16px;
+    font-family: 'poppins';
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 90%; /* Lebar diperbesar */
+    max-width: 95%; /* Agar tidak terlalu mepet */
+}
+
+  /* featured civil product section end */
 
 /* product section start */
 .container-product {
@@ -161,7 +229,6 @@
   padding: 1rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
-  position: relative;
   border: none; 
   outline: none;
   border-radius: 16px;
@@ -259,7 +326,7 @@
     font-size: 16px;
     font-family: 'Poppins';
     color: #fff;
-    background-image: url('../public/footer-image.png');
+    background-image: url('../public/footer.png');
     background-size: cover;
     background-position: center;
   }
