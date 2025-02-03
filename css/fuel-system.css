@@ -15,77 +15,130 @@
 
 /* navbar css */
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-  }
-  body {
-    padding-top: 12rem;
-    margin-top: 0;
-  }
-  nav,
-  .navbar {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    box-shadow: 0 25px 25px rgba(35, 35, 35, 0.04);
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.8);
-    font-family: 'poppins';
-    font-size: 16px;
-    font-weight: 600;
-    display: flex;
-    padding: 24px 80px;
-    width: 100%;
-  }
-  .navbar-brand {
-    padding-left: 2rem;
-  }
-  .navbar-nav {
-    flex-grow: 1;
-    justify-content: center;
-  }
-  .nav-item {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-  .navbar-brand img {
-    max-height: 90px;
-  }
-  .btn-primary {
-    margin-right: 2rem;
-  }
-  .btn-custom {
-    margin-right: 1rem;
-    background-color: #2E8C93;
-    color: white;
-    border: none;
-    text-decoration: none;
-    font-weight: normal;
-    display: inline-block;
-    min-width: 53px;
-    padding: 12px 18px;
-  }
-  .btn-custom:hover {
-    background-color: #0f4141;
-    color: white;
-  }
-  
-  .navbar-nav,
-  .nav-item {
-    font-weight: bold;
-    color: #135155;
-  }
-  .dropdown-menu {
-    padding: 8px;
-    gap: 10px;
-  }
-  .dropdown-menu,
-  .dropdown-item {
-    color: #4a606b;
-    font-family: 'poppins';
-    font-size: 16px;
-    font-weight: normal;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 12rem;
+  margin-top: 0;
+}
+
+nav,
+.navbar {
+  padding: 24px 80px;
+  box-shadow: 0 25px 25px rgba(35, 35, 35, 0.04);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.navbar-brand {
+  padding-left: 2rem;
+}
+
+.navbar-brand img {
+  max-height: 90px;
+}
+
+.navbar-nav {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+  font-weight: bold;
+  color: #141B2A;
+  position: relative;
+}
+
+.nav-link {
+  color: #141B2A;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+  color: #135155;
+}
+
+.btn-custom {
+  background-color: #2E8C93;
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 12px 18px;
+}
+
+.btn-custom:hover {
+  background-color: #247278;
+  color: white;
+}
+
+/* Dropdown specific styles */
+.dropdown-menu-custom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 800px;
+  background-color:rgba(17, 111, 117, 0.9);
+  border-radius: 16px;
+  padding: 24px;
+  border: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.dropdown-menu-custom.show {
+  display: flex;
+}
+
+.dropdown-column {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.dropdown-header {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 0 12px 0;
+  margin-bottom: 16px;
+  padding: 1rem;
+  width: 350px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-item {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 0;
+  background: transparent;
+  transition: color 0.2s ease, padding-left 0.3s ease-out; 
+}
+
+.dropdown-item:hover {
+  color: #F7F7F7;
+  background: transparent;
+  padding-left: 7px;
+}
+/* Active state for Product nav-item */
+.nav-item.dropdown .nav-link.active {
+  color: #2E8C93;
+  background-color: rgba(46, 140, 147, 0.1);
+  border-radius: 4px;
+}
   /* navbar css end */
 
   /* hero section start */
@@ -106,6 +159,18 @@
         line-height: 1.6;
         margin: 1.5rem 0;
     }
+    .rectangle {
+      position: relative;
+      z-index: 1; /* Tetap di bawah */
+  }
+  
+  .fuel-box {
+      position: absolute;
+      top: 50%; /* Sesuaikan dengan kebutuhan */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2; /* Di atas rectangle */
+  }
   /* hero section end */
 
   /* why use fuel system start */  
@@ -238,6 +303,33 @@
   }
   /* usage fuel system end */
 
+  .card-interest {
+    font-size: 16px; 
+    font-family: 'poppins'; 
+    color: #000; 
+    line-height: 1.4; 
+    margin: 1.5rem 0; 
+    background-color: #F2F2F2;
+    border: none; 
+    outline: none;
+    border-radius: 16px;
+    height: 400px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.card-body-interest {
+  margin-top: 5rem;
+}
+.container-interest {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.card-interest-title {
+  font-size: 25px;
+  font-family: 'poppins';
+  font-weight: bold;
+}
+
   
   /* footer section start */
 .card-footer {
@@ -260,6 +352,13 @@
 .call-center {
   text-align: right;
 }
+
+.call-center-text {
+  font-size: 22px;
+  font-family: 'Poppins';
+  color: #fff;
+}
+
 
 .footer-circle-check {
   width: 25px;

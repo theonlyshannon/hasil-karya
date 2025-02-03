@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="../public/logo/logo-hasil-karya.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <title>Hasil Karya</title>
 </head>
@@ -17,7 +19,7 @@
 <body>
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../html/index.html">
             <img src="../public/logo/logo-hasil-karya.png" alt="Logo" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -27,32 +29,37 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="../html/index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">Client</a>
+                    <a class="nav-link" href="#client">Client</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Product
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Produk
                     </a>
                     <div class="dropdown-menu dropdown-menu-custom" aria-labelledby="navbarDropdown">
                         <div class="dropdown-column">
-                            <h6 class="dropdown-header">DIVISI SIPIL</h6>
-                            <a class="dropdown-item" href="#">Perencanaan dan Survey Topografi</a>
-                            <a class="dropdown-item" href="#">Pemancangan Pondasi</a>
-                            <a class="dropdown-item" href="#">Cut and Fill Lahan</a>
-                            <a class="dropdown-item" href="#">Pembangunan Gedung</a>
-                            <a class="dropdown-item" href="#">Pembangunan Jalan dan Jembatan</a>
-                            <a class="dropdown-item" href="#">Pemasangan dan Fabrikasi Baja</a>
+                            <h6 class="dropdown-header text-center">DIVISI SIPIL</h6>
+                            <a class="dropdown-item" href="#civil-product">Perencanaan dan Survey Topografi</a>
+                            <a class="dropdown-item" href="#civil-product">Pemancangan Pondasi</a>
+                            <a class="dropdown-item" href="#civil-product">Cut and Fill Lahan</a>
+                            <a class="dropdown-item" href="#civil-product">Pembangunan Gedung</a>
+                            <a class="dropdown-item" href="#civil-product">Pembangunan Jalan dan Jembatan</a>
+                            <a class="dropdown-item" href="#civil-product">Pembangunan DI</a>
+                            <a class="dropdown-item" href="#civil-product">Pemasangan dan Fabrikasi Baja</a>
+                            <a class="dropdown-item" href="#civil-product">Instalasi Pengaman Jalan Guard Raill</a>
+                            <a class="dropdown-item" href="#civil-product">Instalasi Perpipaan HDPE dan MDPE</a>
                         </div>
                         <div class="dropdown-column">
-                            <h6 class="dropdown-header">DIVISI TEKNOLOGI (IT)</h6>
-                            <a class="dropdown-item" href="#">SiMonRo (Sistem Manajemen Proyek)</a>
-                            <a class="dropdown-item" href="#">Fuel System Dispenser Solar</a>
-                            <a class="dropdown-item" href="#">Early Warning System Banjir dan Gempa</a>
-                            <a class="dropdown-item" href="#">Automation Jembatan Timbang</a>
+                            <h6 class="dropdown-header text-center">DIVISI TEKNOLOGI (IT)</h6>
+                            <a class="dropdown-item" href="../html/simonro.html">SiMonRo (Sistem Manajemen Proyek)</a>
+                            <a class="dropdown-item" href="../html/fuel-system.html">Fuel System Dispenser Solar</a>
+                            <a class="dropdown-item" href="../html/ews.html">Early Warning System Banjir dan Gempa
+                                Bumi</a>
+                            <a class="dropdown-item" href="../html/automation-jembatan.html">Automation Jembatan Timbang
+                                & Portal Gate</a>
                             <a class="dropdown-item" href="#">Solar Cell</a>
                             <a class="dropdown-item" href="#">CCTV Wireless Proyek</a>
                         </div>
@@ -62,17 +69,172 @@
                     <a class="nav-link" href="about.html">Proyek</a>
                 </li>
             </ul>
-            <button class="btn btn-custom" type="button">Hubungi Kami</button>
+            <div class="dropdown show">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Login EWS</a>
+                    <a class="dropdown-item" href="#">Login Simonro</a>
+                </div>
+            </div>
         </div>
     </nav>
     <!-- navbar end -->
 
     <!-- hero start -->
+    <div class="container container-hero position-relative">
+        <div class="container position-relative mt-5">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <div class="d-flex justify-content-center">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+
+                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button> -->
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../public/index/Subtract1.png" class="d-block w-100" alt="Slide 1">
+                        <div class="carousel-caption">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="feature-label">
+                                        <i class="fa-regular fa-building" style="color: #FFF; margin-right: 10px;"></i>
+                                        Jasa Konstruksi & Pengembangan Teknologi
+                                    </p>
+                                    <h3 style="font-weight: 600;">Solusi Mudah Mengelola Proyek, Bangunan, dan Aset</h3>
+                                    <p class="mb-5">Dengan inovasi terbaru, kami memberikan solusi terbaik untuk
+                                        kebutuhan konstruksi Anda.</p>
+                                    <button class="btn btn-custom-hero" type="button">Produk Kami</button>
+                                </div>
+                                <div class="col">
+                                    <div class="card card-hero">
+                                        <div class="card-body">
+                                            <div class="card-hero-content">
+                                                <div class="card-hero-img">
+                                                    <img src="../public/index/card-glass-img-1.png" alt="">
+                                                </div>
+                                                <div class="card-hero-text">
+                                                    <p>
+                                                        Temukan proyek terbaru kami
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-hero-icon">
+                                                <img src="../public/index/icon-hero.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../public/index/Subtract2.png" class="d-block w-100" alt="Slide 1">
+                        <div class="carousel-caption">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="feature-label">
+                                        <i class="fa-regular fa-building" style="color: #FFF; margin-right: 10px;"></i>
+                                        Jasa Konstruksi & Pengembangan Teknologi
+                                    </p>
+                                    <h3 style="font-weight: 600;">Pengelolaan Proyek dan Aset Jadi Lebih Praktis dan
+                                        Efisien</h3>
+                                    <p class="mb-5">Dengan inovasi terbaru, kami memberikan solusi terbaik untuk
+                                        kebutuhan konstruksi Anda.</p>
+                                    <button class="btn btn-custom-hero" type="button">Produk Kami</button>
+                                </div>
+                                <div class="col">
+                                    <div class="card card-hero">
+                                        <div class="card-body">
+                                            <div class="card-hero-content">
+                                                <div class="card-hero-img">
+                                                    <img src="../public/index/card-glass-img-2.png" alt="">
+                                                </div>
+                                                <div class="card-hero-text">
+                                                    <p>
+                                                        Temukan proyek terbaru kami
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-hero-icon">
+                                                <img src="../public/index/icon-hero.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../public/index/Subtract3.png" class="d-block w-100" alt="Slide 1">
+                        <div class="carousel-caption">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="feature-label">
+                                        <i class="fa-regular fa-building" style="color: #FFF; margin-right: 10px;"></i>
+                                        Jasa Konstruksi & Pengembangan Teknologi
+                                    </p>
+                                    <h3 style="font-weight: 600;">Dengan inovasi terbaru, kami memberikan solusi terbaik
+                                        untuk kebutuhan konstruksi Anda.</h3>
+                                    <p class="mb-5">Dengan inovasi terbaru, kami memberikan solusi terbaik untuk
+                                        kebutuhan konstruksi Anda.</p>
+                                    <button class="btn btn-custom-hero" type="button">Produk Kami</button>
+                                </div>
+                                <div class="col">
+                                    <div class="card card-hero">
+                                        <div class="card-body">
+                                            <div class="card-hero-content">
+                                                <div class="card-hero-img">
+                                                    <img src="../public/index/card-glass-img-3.png" alt="">
+                                                </div>
+                                                <div class="card-hero-text">
+                                                    <p>
+                                                        Temukan proyek terbaru kami
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-hero-icon">
+                                                <img src="../public/index/icon-hero.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-footer">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- hero end -->
 
     <!-- client start -->
-    <div class="container container-client">
+    <div class="container container-client" id="client">
         <div class="client-text">
             <h2 style="font-weight: bold;">
                 Dipercaya Oleh Klien Terbaik di Berbagai Industri
@@ -148,7 +310,11 @@
             <div class="row">
                 <div class="col">
                     <div class="card-body position-relative">
-                        <img src="../public/index/instalasi-jaringan-internet.png" alt="">
+                        <div class="card-img position-relative">
+                            <img src="../public/index/icon-img.png" class="icon-img" alt="Icon" data-bs-toggle="modal"
+                                data-bs-target="#imageModal">
+                            <img src="../public/index/instalasi-jaringan-internet.png" alt="">
+                        </div>
                         <div class="glassmorphic-text">
                             Instalasi Jaringan Internert
                         </div>
@@ -156,7 +322,11 @@
                 </div>
                 <div class="col">
                     <div class="card-body position-relative">
-                        <img src="../public/index/instalasi-ews-monitoring.png" alt="">
+                        <div class="card-img position-relative">
+                            <img src="../public/index/icon-img.png" class="icon-img" alt="Icon" data-bs-toggle="modal"
+                                data-bs-target="#imageModal">
+                            <img src="../public/index/instalasi-ews-monitoring.png" alt="">
+                        </div>
                         <div class="glassmorphic-text">
                             Instalasi EWS Monitoring
                         </div>
@@ -177,7 +347,7 @@
     <!-- featured it product end -->
 
     <!-- featured sipil product start -->
-    <div class="container container-civil-product mb-5">
+    <div class="container container-civil-product mb-5" id="civil-product">
         <div class="featured-product-text text-center">
             <h2 style="font-weight: bold;">
                 Produk Unggulan yang di Wujudkan Tim Divisi Sipil Hasil Karya
@@ -191,7 +361,12 @@
             <div class="row">
                 <div class="col">
                     <div class="card-body position-relative">
-                        <img src="../public/index/survey-topografi.png" class="img-fluid" alt="Perencanaan dan Survey Topografi">
+                        <div class="card-img position-relative">
+                            <img src="../public/index/icon-img.png" class="icon-img" alt="Icon" data-bs-toggle="modal"
+                                data-bs-target="#imageModal">
+                            <img src="../public/index/survey-topografi.png" class="img-fluid"
+                                alt="Perencanaan dan Survey Topografi">
+                        </div>
                         <div class="glassmorphic-text">
                             Perencanaan dan Survey Topografi
                         </div>
@@ -199,7 +374,12 @@
                 </div>
                 <div class="col">
                     <div class="card-body position-relative">
-                        <img src="../public/index/pemancangan-pondasi.png" alt="">
+                        <div class="card-img position-relative">
+                            <img src="../public/index/icon-img.png" class="icon-img" alt="Icon" data-bs-toggle="modal"
+                                data-bs-target="#imageModal">
+                            <img src="../public/index/pemancangan-pondasi.png" class="img-fluid"
+                                alt="Pemancangan Pondasi">
+                        </div>
                         <div class="glassmorphic-text">
                             Pemancangan Pondasi
                         </div>
@@ -207,7 +387,12 @@
                 </div>
                 <div class="col">
                     <div class="card-body position-relative">
-                        <img src="../public/index/cut-and-fill-lahan.png" alt="">
+                        <div class="card-img position-relative">
+                            <img src="../public/index/icon-img.png" class="icon-img" alt="Icon" data-bs-toggle="modal"
+                                data-bs-target="#imageModal">
+                            <img src="../public/index/cut-and-fill-lahan.png" class="img-fluid"
+                                alt="Cut and Fill Lahan">
+                        </div>
                         <div class="glassmorphic-text">
                             Cut and Fill Lahan
                         </div>
@@ -217,7 +402,12 @@
             <div class="row mt-3">
                 <div class="col">
                     <div class="card-body position-relative">
-                        <img src="../public/index/pembangunan-gedung.png" alt="">
+                        <div class="card-img position-relative">
+                            <img src="../public/index/icon-img.png" class="icon-img" alt="Icon" data-bs-toggle="modal"
+                                data-bs-target="#imageModal">
+                            <img src="../public/index/pembangunan-gedung.png" class="img-fluid"
+                                alt="Pembangunan Gedung">
+                        </div>
                         <div class="glassmorphic-text">
                             Pembangunan Gedung
                         </div>
@@ -225,7 +415,12 @@
                 </div>
                 <div class="col">
                     <div class="card-body position-relative">
-                        <img src="../public/index/pembangunan-jalan-dan jembatan.png" alt="">
+                        <div class="card-img position-relative">
+                            <img src="../public/index/icon-img.png" class="icon-img" alt="Icon" data-bs-toggle="modal"
+                                data-bs-target="#imageModal">
+                            <img src="../public/index/pembangunan-jalan-dan jembatan.png" class="img-fluid"
+                                alt="Pembangunan Jalan dan Jembatan">
+                        </div>
                         <div class="glassmorphic-text">
                             Pembangunan Jalan dan Jembatan
                         </div>
@@ -233,7 +428,11 @@
                 </div>
                 <div class="col">
                     <div class="card-body position-relative">
-                        <img src="../public/index/pembangunan-di.png" alt="">
+                        <div class="card-img position-relative">
+                            <img src="../public/index/icon-img.png" class="icon-img" alt="Icon" data-bs-toggle="modal"
+                                data-bs-target="#imageModal">
+                            <img src="../public/index/pembangunan-di.png" class="img-fluid" alt="Pembangunan DI">
+                        </div>
                         <div class="glassmorphic-text">
                             Pembangunan DI
                         </div>
@@ -243,7 +442,12 @@
             <div class="row mt-3">
                 <div class="col">
                     <div class="card-body position-relative">
-                        <img src="../public/index/pemasangan-dan-fabrikasi-baja.png" alt="">
+                        <div class="card-img position-relative">
+                            <img src="../public/index/icon-img.png" class="icon-img" alt="Icon" data-bs-toggle="modal"
+                                data-bs-target="#imageModal">
+                            <img src="../public/index/pemasangan-dan-fabrikasi-baja.png" class="img-fluid"
+                                alt="Pemasangan dan Fabrikasi Baja">
+                        </div>
                         <div class="glassmorphic-text">
                             Pemasangan dan Fabrikasi Baja
                         </div>
@@ -251,7 +455,12 @@
                 </div>
                 <div class="col">
                     <div class="card-body position-relative">
-                        <img src="../public/index/instalasi-pengaman-jalan-guard-raill.png" alt="">
+                        <div class="card-img position-relative">
+                            <img src="../public/index/icon-img.png" class="icon-img" alt="Icon" data-bs-toggle="modal"
+                                data-bs-target="#imageModal">
+                            <img src="../public/index/instalasi-pengaman-jalan-guard-raill.png" class="img-fluid"
+                                alt="Instalasi pengaman jalan Guard Raill">
+                        </div>
                         <div class="glassmorphic-text">
                             Instalasi pengaman jalan Guard Raill
                         </div>
@@ -259,7 +468,12 @@
                 </div>
                 <div class="col">
                     <div class="card-body position-relative">
-                        <img src="../public/index/installasi-perpipaan-hdpe.png" alt="">
+                        <div class="card-img position-relative">
+                            <img src="../public/index/icon-img.png" class="icon-img" alt="Icon" data-bs-toggle="modal"
+                                data-bs-target="#imageModal">
+                            <img src="../public/index/installasi-perpipaan-hdpe.png" class="img-fluid"
+                                alt="Instalasi Perpipaan HDPE dan MDPE">
+                        </div>
                         <div class="glassmorphic-text">
                             Instalasi Perpipaan HDPE dan MDPE
                         </div>
@@ -271,6 +485,52 @@
         <div class="btn-product">
             <i class="fa-solid fa-arrow-left button-circle" style="color:#fff;"></i>
             <i class="fa-solid fa-arrow-right button-circle" style="color:#fff;"></i>
+        </div>
+    </div>
+
+    <!-- Modal dengan Carousel -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Pekerjaan Instalasi HDPE Air Bersih Kaligua</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../public/index/instalasi-hdpe-kaligua.png" class="d-block w-100"
+                                    alt="Image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../public/index/instalasi-hdpe-kaligua1.png" class="d-block w-100"
+                                    alt="Image 2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <!-- Thumbnail Preview -->
+                    <div class="thumbnail-preview">
+                        <img src="../public/index/instalasi-hdpe-kaligua.png" class="thumbnail active"
+                            data-bs-target="#imageCarousel" data-bs-slide-to="0" alt="Thumbnail 1">
+                        <img src="../public/index/instalasi-hdpe-kaligua1.png" class="thumbnail"
+                            data-bs-target="#imageCarousel" data-bs-slide-to="1" alt="Thumbnail 2">
+                    </div>
+                    <div class="nav-buttons">
+                        <button class="carousel-control" type="button" data-bs-target="#imageCarousel"
+                            data-bs-slide="prev">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button class="carousel-control" type="button" data-bs-target="#imageCarousel"
+                            data-bs-slide="next">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- featured sipil product end -->
@@ -295,7 +555,7 @@
                     <p>Simonro merupakan sistem yang mengintegrasikan perangkat lunak dan perangkat keras, Simonro
                         dirancang untuk memudahkan pencatatan transaksi bahan bakar, pengelolaan volume material, serta
                         pengelolaan alat berat.</p>
-                    <button class="btn btn-card-custom" type="button">Buka Selengkapnya</button>
+                    <a href="../html/simonro.html" class="btn btn-card-custom">Buka Selengkapnya</a>
                 </div>
             </div>
         </div>
@@ -311,7 +571,7 @@
                     <h3>Fuel System Membantu Anda Untuk Pengisian Bahan Bakar yang Transparan dan Akurat</h3>
                     <p>Fuel System Dispenser berbasis Internet of Things (IoT) adalah sebuah sistem yang dirancang untuk
                         mengelola proses pengisian bahan bakar, khususnya solar, dengan memanfaatkan teknologi IoT.</p>
-                    <button class="btn btn-card-custom" type="button">Buka Selengkapnya</button>
+                    <a href="../html/fuel-system.html" class="btn btn-card-custom">Buka Selengkapnya</a>
                 </div>
             </div>
         </div>
@@ -328,7 +588,7 @@
                     <p>Simonro merupakan sistem yang mengintegrasikan perangkat lunak dan perangkat keras, Simonro
                         dirancang untuk memudahkan pencatatan transaksi bahan bakar, pengelolaan volume material, serta
                         pengelolaan alat berat.</p>
-                    <button class="btn btn-card-custom" type="button">Buka Selengkapnya</button>
+                    <a href="../html/automation-jembatan.html" class="btn btn-card-custom">Buka Selengkapnya</a>
                 </div>
             </div>
         </div>
@@ -345,14 +605,14 @@
                     <p>Simonro merupakan sistem yang mengintegrasikan perangkat lunak dan perangkat keras, Simonro
                         dirancang untuk memudahkan pencatatan transaksi bahan bakar, pengelolaan volume material, serta
                         pengelolaan alat berat.</p>
-                    <button class="btn btn-card-custom" type="button">Buka Selengkapnya</button>
+                    <a href="../html/ews.html" class="btn btn-card-custom">Buka Selengkapnya</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- product end -->
 
-    <!-- Footer -->
+    <!-- footer section start -->
     <div class="card-footer">
 
         <div class="card-body-footer">
@@ -360,7 +620,7 @@
                 <div class="footer-content">
                     <div>
                         <h4 class="card-title">
-                            CV.Hasil Karya
+                            CV. Hasil Karya
                         </h4>
                         <p class="card-text mt-3">
                             Jln. Semingkir no.27 Rejasari Purwokerto Barat, Banyumas, Jawa Tengah
@@ -370,7 +630,7 @@
                         <h4 class="card-title">
                             Call Center
                         </h4>
-                        <p class="card-text mt-3">
+                        <p class="call-center-text mt-3">
                             <i class="fa-solid fa-phone" style="margin-right: 10px;"></i>
                             081 227 8800
                         </p>
@@ -390,7 +650,7 @@
                         <p class="mt-3">Support dengan teknologi terkini</p>
                     </div>
                 </div>
-                <p class="card-text mt-5">
+                <p class="footer-card-text mt-5">
                     Copyright © 2025. All Rights Reserved.
                 </p>
             </div>
@@ -399,7 +659,7 @@
     </div>
     <!-- footer section end -->
 
-
+    <script src="../js/custom.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
