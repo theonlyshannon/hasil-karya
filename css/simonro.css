@@ -132,6 +132,20 @@ nav,
   background-color: rgba(46, 140, 147, 0.1);
   border-radius: 4px;
 }
+/* Dropdown Login */
+#dropdownMenuLink {
+  background-color: #2E8C93;
+  padding: 12px 18px; 
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.login-dropdown .dropdown-menu {
+  background-color:#2E8C93;
+  color: white;
+  padding: 1rem;
+}
   /* navbar css end */
 
   /* hero section start */
