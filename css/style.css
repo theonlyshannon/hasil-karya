@@ -189,7 +189,7 @@ nav,
 /* Dropdown Login */
 #dropdownMenuLink {
   background-color: #2E8C93;
-  padding: 12px 18px; 
+  padding: 12px 60px; 
   color: white;
   border: none;
   outline: none;
@@ -199,6 +199,9 @@ nav,
   background-color:#2E8C93;
   color: white;
   padding: 1rem;
+}
+.dropdown-toggle::after {
+  display: none;
 }
   /* navbar css end */
 
@@ -235,28 +238,13 @@ nav,
   font-family: 'Poppins', sans-serif;
   top: 10%;
   text-align: left;
+  left: 5%;
+  transform: translateX(0);
 }
 
-.carousel-caption .row {
-=
-}
+
 
 /* Carousel Controls */
-/* .carousel-control-prev, .carousel-control-next {
-  position: absolute;
-  bottom: 5%;
-  width: auto;
-  color: #000;
-}
-
-.carousel-control-prev {
-  right: 8%;
-}
-
-.carousel-control-next {
-  right: 2%;
-} */
-
 /* Slide Indicators */
 .carousel-indicators {
   position: absolute;
@@ -338,8 +326,6 @@ nav,
     border-radius: 16px;
   }
   .card-client-pp {
-    background: #ffff;
-    border-radius: 20px;
     padding: 1rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -347,7 +333,6 @@ nav,
     border: none; 
     outline: none;
     border-radius: 16px;
-    box-shadow: -1px 31px 146px -65px rgba(0,0,0,0.51);
   }
   .client-list .row {
     display: flex;
@@ -451,7 +436,7 @@ nav,
     color: white;
     font-weight: bold;
     text-align: center;
-    width: 90%; /* Lebar diperbesar */
+    width: 87%; /* Lebar diperbesar */
     max-width: 95%; /* Agar tidak terlalu mepet */
 }
 .card-img {
@@ -459,6 +444,7 @@ nav,
 }
 .icon-img {
   position: absolute;
+  weight: 20px;
   top: 10px; 
   left: 19rem; 
   width: 50px; 
@@ -493,75 +479,9 @@ nav,
   padding: 0;
 }
 
+
 /* Carousel styling */
-.carousel {
-  position: relative;
-  margin-bottom: 1rem;
-}
 
-.carousel-item img {
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-/* Thumbnail preview container */
-.thumbnail-preview {
-  display: flex;
-  gap: 10px;
-  padding: 1rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.thumbnail {
-  width: 100px;
-  height: 60px;
-  border-radius: 4px;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: opacity 0.3s;
-}
-
-.thumbnail.active {
-  opacity: 1;
-  border: 2px solid white;
-}
-
-/* Custom navigation buttons */
-.modal-footer {
-  border-top: none;
-  justify-content: space-between;
-  padding: 1rem 1.5rem;
-}
-
-.nav-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.carousel-control {
-  background: #2E8C93;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-
-.carousel-control:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.carousel-control i {
-  color: white;
-}
 /* modal style */
   /* featured civil product section end */
 

@@ -149,13 +149,67 @@ nav,
   /* navbar css end */
 
   /* hero section start */
+  .hero-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.hero-background {
+    width: 100%;
+    display: block;
+}
+
+/* Cursor lebih besar */
+.cursor {
+    position: absolute;
+    width: 500px; /* Ukuran lebih besar */
+    height: auto;
+    pointer-events: none;
+    animation: moveCursor 5s infinite alternate ease-in-out;
+}
+
+/* Animasi bergerak dari pojok kiri atas -> tengah -> pojok kanan atas */
+@keyframes moveCursor {
+    0% {
+        transform: translate(-200px, -100px); /* Pojok kiri atas */
+    }
+    50% {
+        transform: translate(0, 0); /* Tengah */
+    }
+    100% {
+        transform: translate(200px, -100px); /* Pojok kanan atas */
+    }
+}
+
+  .hero-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.hero-background {
+    width: 100%;
+    display: block;
+}
+
+.cursor {
+    position: absolute;
+    width: 50px; /* Sesuaikan ukuran cursor */
+    height: auto;
+    pointer-events: none;
+    transition: transform 0.1s linear; /* Animasi halus */
+}
+
   .hero-label h2 {
     font-size: 50px; /* Ubah ukuran teks */
     font-family: 'poppins'; /* Ganti font */
     font-weight: bold; /* Atur ketebalan teks */
     color: #000; /* Warna teks */
     line-height: 1.4; /* Spasi antar baris */
-    text-transform: capitalize; /* Ubah kapitalisasi teks */
     margin: 1.5rem 0; /* Atur jarak atas dan bawah */
   }
   .hero-label p {
@@ -163,7 +217,6 @@ nav,
     font-family: 'poppins'; /* Ganti font */
     color: #5D5D5D; /* Warna teks */
     line-height: 1.4; /* Spasi antar baris */
-    text-transform: capitalize; /* Ubah kapitalisasi teks */
     margin: 1.5rem 0; /* Atur jarak atas dan bawah */
   }
   .btn-hero-custom {
@@ -208,7 +261,6 @@ nav,
     font-family: 'poppins'; 
     color: #000; /* Warna teks */
     line-height: 1.4; /* Spasi antar baris */
-    text-transform: capitalize; /* Ubah kapitalisasi teks */
     margin: 1.5rem 0; /* Atur jarak atas dan bawah */
 }
 .card-usage {
@@ -431,7 +483,7 @@ nav,
       font-family: 'poppins'; 
       color: #000; /* Warna teks */
       line-height: 1.4; /* Spasi antar baris */
-      text-transform: capitalize; /* Ubah kapitalisasi teks */
+
       margin: 1.5rem 0; /* Atur jarak atas dan bawah */
   }
   .number-circle {
@@ -501,7 +553,7 @@ nav,
         font-family: 'poppins'; 
         color: #000; /* Warna teks */
         line-height: 1.4; /* Spasi antar baris */
-        text-transform: capitalize; /* Ubah kapitalisasi teks */
+  
         margin: 1.5rem 0; /* Atur jarak atas dan bawah */
     }
     .card-feature {

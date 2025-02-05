@@ -162,7 +162,6 @@ nav,
     font-weight: bold;
     color: #000;
     line-height: 1.4;
-    text-transform: capitalize;
     margin: 1.5rem 0;
   }
     .hero-text {
@@ -173,18 +172,22 @@ nav,
         line-height: 1.6;
         margin: 1.5rem 0;
     }
-    .rectangle {
-      position: relative;
-      z-index: 1; /* Tetap di bawah */
+    .card-hero {
+      width: 1248px; /* Sesuaikan ukuran */
+      height: 539px; /* Sesuaikan ukuran */
+      background-image: url('../public/fuel-system/rectangle.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative; /* Untuk menempatkan elemen di atas background */
+      display: flex; /* Jika ingin teks dan ikon tersusun rapi */
+      align-items: center; 
+      justify-content: center;
+      color: white; 
+      border: none;
+      outline: none;
   }
-  
-  .fuel-box {
-      position: absolute;
-      top: 50%; /* Sesuaikan dengan kebutuhan */
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2; /* Di atas rectangle */
-  }
+    
   /* hero section end */
 
   /* why use fuel system start */  
@@ -214,7 +217,7 @@ nav,
         font-family: 'poppins'; 
         color: #000; /* Warna teks */
         line-height: 1.4; /* Spasi antar baris */
-        text-transform: capitalize; /* Ubah kapitalisasi teks */
+     /* Ubah kapitalisasi teks */
         margin: 1.5rem 0; /* Atur jarak atas dan bawah */
     }
     .card-feature {
@@ -245,7 +248,7 @@ nav,
         font-family: 'poppins';
         font-weight: bold;
         color: #000;
-        text-transform: capitalize;
+    
     }
     .fuel-system-list {
       margin-top: 3rem;
@@ -279,7 +282,7 @@ nav,
     font-family: 'poppins'; 
     color: #24273B; /* Warna teks */
     line-height: 1.4; /* Spasi antar baris */
-    text-transform: capitalize; /* Ubah kapitalisasi teks */
+ /* Ubah kapitalisasi teks */
     margin: 1.5rem 0; /* Atur jarak atas dan bawah */
 }
 .number-text-container {

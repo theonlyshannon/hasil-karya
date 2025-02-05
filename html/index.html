@@ -179,7 +179,7 @@
                 <div class="col" data-aos="fade-up">
                     <div class="card card-client">
                         <div class="card-body">
-                            <div class="card-image">
+                            <div class="card-image mt-3">
                                 <img src="../public/index/pertamina.png" alt="Pertamina">
                             </div>
                         </div>
@@ -215,7 +215,7 @@
                 <div class="col" data-aos="fade-up" data-aos-delay="250">
                     <div class="card card-client">
                         <div class="card-body">
-                            <div class="card-image">
+                            <div class="card-image mt-3">
                                 <img src="../public/index/adaro-energy.png" alt="Adaro Energy">
                             </div>
                         </div>
@@ -227,61 +227,103 @@
     <!-- client end -->
 
     <!-- featured it product start -->
-    <div class="container container-featured-product">
-        <div class="featured-product-text text-center">
-            <h2 style="font-weight: bold;">
-                Produk Unggulan yang di Wujudkan Tim Divisi IT Hasil Karya
-            </h2>
-            <p>
-                Bersama Hasil Karya, kami telah membantu berbagai klien mewujudkan visi mereka menjadi kenyataan
-            </p>
-        </div>
+<div class="container container-featured-product">
+    <div class="featured-product-text text-center">
+        <h2 style="font-weight: bold;">
+            Inovasi dan Proyek Terbaik dari Tim Divisi IT Hasil Karya
+        </h2>
+        <p>
+            Bersama Hasil Karya, kami telah membantu berbagai klien mewujudkan visi mereka menjadi kenyataan
+        </p>
+    </div>
 
-        <div class="card card-featured-product">
-            <div class="row">
-                <div class="col" data-aos="fade-up">
-                    <div class="card-body position-relative">
-                        <div class="card-img position-relative">
-                            <img src="../public/index/icon-img.png" class="icon-img" alt="Icon" data-bs-toggle="modal"
-                                data-bs-target="#imageModal">
+    <!-- Bootstrap Carousel -->
+    <div id="featuredProductCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card-body position-relative">
+                            <div class="card-img position-relative">
+                                <img src="../public/index/icon-img.png" class="icon-img" alt="Icon">
+                                <img src="../public/index/instalasi-jaringan-internet.png" alt="">
+                            </div>
+                            <div class="glassmorphic-text">
+                                Instalasi Jaringan Internet
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-body position-relative">
+                            <div class="card-img position-relative">
+                                <img src="../public/index/icon-img.png" class="icon-img" alt="Icon">
+                                <img src="../public/index/instalasi-ews-monitoring.png" alt="">
+                            </div>
+                            <div class="glassmorphic-text">
+                                Instalasi EWS Monitoring
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-body">
                             <img src="../public/index/instalasi-jaringan-internet.png" alt="">
                         </div>
-                        <div class="glassmorphic-text">
-                            Instalasi Jaringan Internert
-                        </div>
                     </div>
                 </div>
-                <div class="col" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card-body position-relative">
-                        <div class="card-img position-relative">
-                            <img src="../public/index/icon-img.png" class="icon-img" alt="Icon" data-bs-toggle="modal"
-                                data-bs-target="#imageModal">
-                            <img src="../public/index/instalasi-ews-monitoring.png" alt="">
-                        </div>
-                        <div class="glassmorphic-text">
-                            Instalasi EWS Monitoring
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card-body position-relative">
+                            <div class="card-img position-relative">
+                                <img src="../public/index/icon-img.png" class="icon-img" alt="Icon">
+                                <img src="../public/index/instalasi-jaringan-internet.png" alt="">
+                            </div>
+                            <div class="glassmorphic-text">
+                                Instalasi CCTV
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card-body">
-                        <img src="../public/index/instalasi-jaringan-internet.png" alt="">
+                    <div class="col-md-4">
+                        <div class="card-body position-relative">
+                            <div class="card-img position-relative">
+                                <img src="../public/index/icon-img.png" class="icon-img" alt="Icon">
+                                <img src="../public/index/instalasi-ews-monitoring.png" alt="">
+                            </div>
+                            <div class="glassmorphic-text">
+                                Pemasangan Server
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-body">
+                            <img src="../public/index/instalasi-jaringan-internet.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="btn-product">
-            <i class="fa-solid fa-arrow-left button-circle" style="color:#fff;"></i>
-            <i class="fa-solid fa-arrow-right button-circle" style="color:#fff;"></i>
-        </div>
+
+        <!-- Navigasi Panah -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#featuredProductCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#featuredProductCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
     </div>
+</div>
+
     <!-- featured it product end -->
 
     <!-- featured sipil product start -->
     <div class="container container-civil-product mb-5" id="civil-product">
         <div class="featured-product-text text-center">
             <h2 style="font-weight: bold;">
-                Produk Unggulan yang di Wujudkan Tim Divisi Sipil Hasil Karya
+                Inovasi dan Proyek Terbaik dari Tim Divisi Sipil Hasil Karya
             </h2>
             <p>
                 Bersama Hasil Karya, kami telah membantu berbagai klien mewujudkan visi mereka menjadi kenyataan
@@ -418,6 +460,7 @@
             <i class="fa-solid fa-arrow-right button-circle" style="color:#fff;"></i>
         </div>
     </div>
+    <!--  -->
 
     <!-- Modal dengan Carousel -->
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
@@ -464,7 +507,6 @@
             </div>
         </div>
     </div>
-    <!-- featured sipil product end -->
 
     <!-- product start -->
     <div class="container container-text-product">

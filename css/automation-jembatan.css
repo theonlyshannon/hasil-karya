@@ -181,7 +181,6 @@ nav,
     font-weight: bold; /* Atur ketebalan teks */
     color: #000; /* Warna teks */
     line-height: 1.4; /* Spasi antar baris */
-    text-transform: capitalize; /* Ubah kapitalisasi teks */
     margin: 1.5rem 0; /* Atur jarak atas dan bawah */
   }
   .hero-text {
@@ -189,7 +188,6 @@ nav,
     font-family: 'poppins'; /* Ganti font */
     color: #24273B; /* Warna teks */
     line-height: 1.4; /* Spasi antar baris */
-    text-transform: capitalize; /* Ubah kapitalisasi teks */
     margin: 1.5rem 0; /* Atur jarak atas dan bawah */
   }
   .btn-hero-custom {
@@ -293,7 +291,6 @@ nav,
     font-family: 'poppins'; /* Ganti font */
     color: #24273B; /* Warna teks */
     line-height: 1.4; /* Spasi antar baris */
-    text-transform: capitalize; /* Ubah kapitalisasi teks */
     margin: 1.5rem 0; /* Atur jarak atas dan bawah */
   }
   .card-usage {
@@ -315,7 +312,7 @@ nav,
         font-family: 'poppins'; 
         color: #24273B; /* Warna teks */
         line-height: 1.4; /* Spasi antar baris */
-        text-transform: capitalize; /* Ubah kapitalisasi teks */
+  
         margin: 1.5rem 0; /* Atur jarak atas dan bawah */
     }
     .number-text-container {
