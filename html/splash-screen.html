@@ -1,36 +1,201 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Splash Screen dengan Logo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/splash-screen.css">
-</head>
-<body>
+<!doctype html>
+<html lang="en">
 
-    <!-- Splash Screen -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="../public/logo/logo-hasil-karya.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/splash-screen.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Hasil Karya</title>
+</head>
+
+<body>
     <div id="splash-screen">
         <img src="../public/logo/logo-hasil-karya.png" alt="Logo" id="splash-logo">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="../html/index.html">
+            <img src="../public/logo/logo-hasil-karya.png" alt="Logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../html/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#client">Client</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Produk
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-custom" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-column">
+                            <h6 class="dropdown-header text-center">DIVISI SIPIL</h6>
+                            <a class="dropdown-item" href="#civil-product">Perencanaan dan Survey Topografi</a>
+                            <a class="dropdown-item" href="#civil-product">Pemancangan Pondasi</a>
+                            <a class="dropdown-item" href="#civil-product">Cut and Fill Lahan</a>
+                            <a class="dropdown-item" href="#civil-product">Pembangunan Gedung</a>
+                            <a class="dropdown-item" href="#civil-product">Pembangunan Jalan dan Jembatan</a>
+                            <a class="dropdown-item" href="#civil-product">Pembangunan DI</a>
+                            <a class="dropdown-item" href="#civil-product">Pemasangan dan Fabrikasi Baja</a>
+                            <a class="dropdown-item" href="#civil-product">Instalasi Pengaman Jalan Guard Raill</a>
+                            <a class="dropdown-item" href="#civil-product">Instalasi Perpipaan HDPE dan MDPE</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <h6 class="dropdown-header text-center">DIVISI TEKNOLOGI (IT)</h6>
+                            <a class="dropdown-item" href="../html/simonro.html">SiMonRo (Sistem Manajemen Proyek)</a>
+                            <a class="dropdown-item" href="../html/fuel-system.html">Fuel System Dispenser Solar</a>
+                            <a class="dropdown-item" href="../html/ews.html">Early Warning System Banjir dan Gempa
+                                Bumi</a>
+                            <a class="dropdown-item" href="../html/automation-jembatan.html">Automation Jembatan Timbang
+                                & Portal Gate</a>
+                            <a class="dropdown-item" href="#">Solar Cell</a>
+                            <a class="dropdown-item" href="#">CCTV Wireless Proyek</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Company Profile</a>
+                </li>
+            </ul>
+            <div class="dropdown login-dropdown">
+                <a class="btn btn-secondary dropdown-toggle dropdown-toggle-login" href="#" role="button"
+                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Login
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item login" href="https://ews.hasilkarya.co.id">Login EWS</a>
+                    <a class="dropdown-item login" href="https://hk-toll.hasilkarya.co.id/">Login Simonro</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- hero start -->
+    <div class="container-hero position-relative">
+        <div class="container position-relative">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../public/index/Subtract1.png" class="d-block w-100" alt="Slide 1">
+                        <div class="carousel-caption">
+                            <p class="feature-label">
+                                <i class="fa-regular fa-building" style="color: #FFF; margin-right: 10px;"></i>
+                                Jasa Konstruksi & Pengembangan Teknologi
+                            </p>
+                            <h3 style="font-weight: 600;">Solusi Mudah Mengelola Proyek, Bangunan, dan Aset</h3>
+                            <p class="mb-5">Dengan inovasi terbaru, kami memberikan solusi terbaik untuk
+                                kebutuhan konstruksi Anda.</p>
+                            <button class="btn btn-custom-hero" type="button">Produk Kami</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../public/index/Subtract2.png" class="d-block w-100" alt="Slide 2">
+                        <div class="carousel-caption">
+                            <p class="feature-label">
+                                <i class="fa-regular fa-building" style="color: #FFF; margin-right: 10px;"></i>
+                                Jasa Konstruksi & Pengembangan Teknologi
+                            </p>
+                            <h3 style="font-weight: 600;">Pengelolaan Proyek dan Aset Jadi Lebih Praktis dan
+                                Efisien</h3>
+                            <p class="mb-5">Dengan inovasi terbaru, kami memberikan solusi terbaik untuk
+                                kebutuhan konstruksi Anda.</p>
+                            <button class="btn btn-custom-hero" type="button">Produk Kami</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../public/index/Subtract3.png" class="d-block w-100" alt="Slide 3">
+                        <div class="carousel-caption">
+                            <p class="feature-label">
+                                <i class="fa-regular fa-building" style="color: #FFF; margin-right: 10px;"></i>
+                                Jasa Konstruksi & Pengembangan Teknologi
+                            </p>
+                            <h2 style="font-weight: 600;">Dengan inovasi terbaru, kami memberikan solusi terbaik
+                                untuk kebutuhan konstruksi Anda.</h2>
+                            <p class="mb-5">Dengan inovasi terbaru, kami memberikan solusi terbaik untuk
+                                kebutuhan konstruksi Anda.</p>
+                            <button class="btn btn-custom-hero" type="button">Produk Kami</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-footer">
+                    <div class="carousel-navigation d-flex justify-content-between align-items-center">
+                        <div class="carousel-indicators">
+                            <div class="d-flex">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                        </div>
+
+                        <div class="nav-buttons">
+                            <button class="carousel-control" type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide="prev">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <button class="carousel-control" type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide="next">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Main Content -->
-    <div id="content" class="container text-center">
-        <h1>Selamat Datang!</h1>
-        <p>Ini adalah konten utama setelah splash screen.</p>
-    </div>
+    <!-- hero end -->
 
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
-        document.getElementById("splash-screen").style.opacity = "0"; // Efek fade-out
-        setTimeout(function() {
-            document.getElementById("splash-screen").style.display = "none";
-            document.getElementById("content").style.display = "block";
-        }, 1000); // Tunggu animasi fade-out selesai (1 detik)
-    }, 3000); // Splash screen tampil selama 3 detik sebelum fade-out
-});
-
+        AOS.init({
+            once: true,
+        });
     </script>
+    <script>
+        window.addEventListener('load', () => {
+            const splashScreen = document.getElementById('splash-screen');
+            const content = document.getElementById('content');
+
+            setTimeout(() => {
+                splashScreen.style.opacity = '0';
+                splashScreen.style.display = 'none';
+                content.style.display = 'block';
+            }, 3000); // Waktu splash screen (3 detik)
+        });
+    </script>
+
+    <script src="../js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

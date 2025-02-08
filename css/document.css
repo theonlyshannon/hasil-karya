@@ -1,0 +1,300 @@
+/* navbar css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    padding-top: 10rem;
+    margin-top: 0;
+  }
+  
+  nav,
+  .navbar {
+    padding: 24px 80px;
+    box-shadow: 0 25px 25px rgba(35, 35, 35, 0.04);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: 'poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+  }
+  
+  .navbar-brand {
+    padding-left: 2rem;
+  }
+  
+  .navbar-brand img {
+    max-height: 90px;
+  }
+  
+  .navbar-nav {
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+  .nav-item {
+    margin: 0 0.5rem;
+    font-weight: bold;
+    color: #141B2A;
+    position: relative;
+  }
+  
+  .nav-link {
+    color: #141B2A;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-link:hover {
+    color: #135155;
+  }
+  
+  .btn-custom {
+    background-color: #2E8C93;
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    padding: 12px 18px;
+  }
+  
+  .btn-custom:hover {
+    background-color: #247278;
+    color: white;
+  }
+  
+  /* Dropdown specific styles */
+  .dropdown-menu-custom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 800px;
+    background-color:rgba(17, 111, 117, 0.9);
+    border-radius: 16px;
+    padding: 24px;
+    border: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  
+  .dropdown-menu-custom.show {
+    display: flex;
+  }
+  
+  .dropdown-column {
+    flex: 1;
+    padding: 0 20px;
+  }
+  
+  .dropdown-header {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 0 12px 0;
+    margin-bottom: 16px;
+    padding: 1rem;
+    width: 350px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dropdown-item {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 0;
+    background: transparent;
+    transition: color 0.2s ease, padding-left 0.3s ease-out; 
+  }
+  
+  .dropdown-item:hover {
+    color: #F7F7F7;
+    background: transparent;
+    padding-left: 7px;
+  }
+  
+  /* Active state for Product nav-item */
+  .nav-item.dropdown .nav-link.active {
+    color: #2E8C93;
+    background-color: rgba(46, 140, 147, 0.1);
+    border-radius: 4px;
+  }
+  /* Dropdown Login */
+  #dropdownMenuLink {
+    background-color: #2E8C93;
+    padding: 12px 60px; 
+    color: white;
+    border: none;
+    outline: none;
+  }
+  
+  .login-dropdown .dropdown-menu {
+    background-color:#2E8C93;
+    color: white;
+    padding: 1rem;
+  }
+  .dropdown-toggle-login::after {
+    display: none;
+  }
+    /* navbar css end */
+
+    /* container text */
+    .container {
+      font-family: 'Poppins';
+    }
+    .container-text {
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+    .container-text h3 {
+      font-weight: bold;
+      font-family: 'Poppins';
+    }
+    .card-wrapper {
+      position: relative;
+      cursor: pointer;
+  }
+
+  .custom-card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+  }
+
+  .card-wrapper:hover .custom-card {
+      filter: blur(5px);
+  }
+
+  .card-header {
+      background-color: #1B90A0;
+      padding-top: 50px;
+      padding-left: 50px;
+      padding-right: 50px;
+      border: none;
+  }
+
+  .card-header-different   {
+      background-color: #085057;
+      padding-top: 50px;
+      padding-left: 50px;
+      padding-right: 50px;
+      border: none;
+  }
+
+  .img-container {
+    background-color: #f8f9fa;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.img-container img {
+    max-width: 250px;
+    height: auto;
+}
+
+  .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+  }
+
+  .card-wrapper:hover .overlay {
+      opacity: 1;
+  }
+
+  .overlay-text {
+      background: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      color: #20B2AA;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      white-space: nowrap;
+  }
+
+  .card-body {
+      background-color: white;
+      padding: 20px;
+  }
+
+  .card-body h5{
+    font-weight: bold;
+  }
+
+  .card-title {
+      color: #333;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+  }
+
+  .card-text {
+      color: #666;
+      font-size: 0.9rem;
+  }
+    /* container text */
+
+    /* footer section start */
+    .card-title-footer {
+
+    }
+.card-footer {
+    padding: 2rem;
+    font-size: 16px;
+    font-family: 'Poppins';
+    color: #fff;
+    background-image: url('../public/footer.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  
+  .call-center {
+    text-align: right;
+  }
+  
+  .call-center-text {
+    font-size: 22px;
+    font-family: 'Poppins';
+    color: #fff;
+  }
+  
+  .footer-circle-check {
+    width: 25px;
+    height: 25px;
+    background-color: #00D47E;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-check-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Poppins';
+  }
+  /* footer section end */

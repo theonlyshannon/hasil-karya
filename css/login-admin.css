@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh; /* Agar body memenuhi seluruh tinggi layar */
+    background-image: url('../public/login/background-image.png'); /* Periksa path gambar */
+    background-size: cover; /* Mengatur gambar agar menutupi seluruh layar */
+    background-position: center; /* Menempatkan gambar di tengah */
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    align-items: center; /* Menempatkan konten secara vertikal di tengah */
+    justify-content: center; /* Menempatkan konten secara horizontal di tengah */
+    font-family: 'Poppins', sans-serif; /* Font yang Anda gunakan */
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.1); /* Warna latar belakang form dengan transparansi */
+    padding: 25px;
+    border-radius: 8px; /* Membuat sudut form menjadi melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan bayangan pada form */
+    max-width: 400px;
+    height: auto;
+    border: 1px solid white;
+    width: 100%;
+}
+ 
+.form-label { 
+    color: #fff;
+    font-weight: 400;
+}
+
+#email:focus {
+    background-color: transparent; /* Background menjadi transparan saat diklik */
+    border-color: white; /* Warna border tetap putih */
+    outline: none; /* Menghapus outline default */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); 
+    color: white; /* Memastikan teks tetap putih saat diketik */
+}
+
+#email::placeholder {
+    color: white; /* Placeholder berwarna putih */
+}
+
+#password:focus {
+    background-color: transparent; /* Background menjadi transparan saat diklik */
+    border-color: white; /* Warna border tetap putih */
+    outline: none; /* Menghapus outline default */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); 
+    color: white; /* Memastikan teks tetap putih saat diketik */
+}
+
+#password::placeholder {
+    color: white; /* Placeholder berwarna putih */
+}
+
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 2px solid white;
+}
+.form-control {
+    color: rgba(255, 255, 255, 0.6); /* Placeholder transparan */
+    opacity: 0.8; 
+}
+.btn-custom {
+    background-color: #fff;
+    color: #2E8C93;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    padding: 12px 18px;
+  }
+  
+  .btn-custom:hover {
+    border: 1px solid white;
+    color: white;
+  }
+  
