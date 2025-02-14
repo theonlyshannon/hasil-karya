@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container-hero {
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .hero-label {
+            font-size: 50px;
+            font-family: 'poppins';
+            font-weight: bold;
+            color: #000;
+            line-height: 1.4;
+            margin: 1.5rem 0;
+        }
+
+        .hero-text {
+            font-size: 16px;
+            font-family: 'poppins';
+            font-weight: normal;
+            color: #5D5D5D;
+            line-height: 1.6;
+            margin: 1.5rem 0;
+        }
+
+        .card-container {
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        .description-text {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            max-width: 300px;
+            z-index: 2;
+            color: #5D5D5D;
+            font-family: 'poppins';
+        }
+
+        .card-hero {
+            width: 1248px;
+            height: 539px;
+            background-image: url('../public/fuel-system/rectangle.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            outline: none;
+        }
+
+        .device-display {
+            position: relative;
+            width: 600px;
+            height: auto;
+        }
+
+        .side-label {
+            position: absolute;
+            top: 30%;
+            right: 100px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+        }
+
+        .curved-arrow {
+            width: 50px;
+            height: 30px;
+            transform: rotate(-30deg);
+        }
+
+        .preview-thumbnails {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 60px;
+            border: 2px solid #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            background: #fff;
+        }
+
+        .navigation-arrows {
+            position: absolute;
+            bottom: 80px;
+            right: 120px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-arrow {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .feature-tags {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 0 100px;
+        }
+
+        .feature-tag {
+            background: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-family: 'poppins';
+        }
+
+        .feature-icon {
+            width: 20px;
+            height: 20px;
+            background: #8BC34A;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container container-hero">
+        <div class="hero-text text-center">
+            <h2 class="hero-label" data-aos="fade-up">
+                Fuel System Membantu Anda Untuk Pengisian Bahan Bakar yang Transparan dan Akurat
+            </h2>
+            <p class="hero-text" data-aos="fade-up" data-aos-delay="100">
+                Fuel System Dispenser adalah sistem berbasis Internet of Things (IoT) yang dirancang Sistem ini
+                dirancang untuk memastikan transparansi dan akurasi dalam proses pengisian solar. Data pengeluaran bahan
+                bakar secara otomatis dikirim ke website SiMonRo.
+            </p>
+        </div>
+
+        <div class="card-container">
+            <div class="description-text">
+                Dengan sistem ini, pengguna dapat memonitor jumlah bahan bakar yang dikeluarkan setiap waktu, sehingga potensi kecurangan dapat diminimalkan.
+            </div>
+
+            <div class="card card-hero">
+                <img src="../public/fuel-system/fuel-system-box1.png" alt="Device Display" class="device-display">
+
+                <div class="side-label">
+                    <img src="../public/fuel-system/Vector 121.png" alt="Arrow" class="curved-arrow">
+                    <span>Tampak Samping</span>
+                </div>
+
+                <div class="preview-thumbnails">
+                    <img src="../public/fuel-system/fuel-system-box1.png" alt="Preview 1" class="thumbnail">
+                    <img src="../public/fuel-system/fuel-system-box2.png" alt="Preview 2" class="thumbnail">
+                </div>
+
+                <div class="navigation-arrows mb-5">
+                    <button class="nav-arrow">←</button>
+                    <button class="nav-arrow">→</button>
+                </div>
+
+                <!-- <div class="feature-tags">
+                    <div class="feature-tag">
+                        <div class="feature-icon"></div>
+                        Data Realtime
+                    </div>
+                    <div class="feature-tag">
+                        <div class="feature-icon"></div>
+                        Penggunaan Kartu RFID
+                    </div>
+                    <div class="feature-tag">
+                        <div class="feature-icon"></div>
+                        Mengurangi Resiko Kecurangan
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Slider functionality
+        const navButtons = document.querySelectorAll('.nav-arrow');
+        const deviceDisplay = document.querySelector('.device-display');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        
+        const images = [
+            '../public/fuel-system/fuel-system-box1.png',
+            '../public/fuel-system/fuel-system-box2.png'
+        ];
+        
+        let currentIndex = 0;
+
+        navButtons[0].addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            deviceDisplay.src = images[currentIndex];
+        });
+
+        navButtons[1].addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            deviceDisplay.src = images[currentIndex];
+        });
+
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', () => {
+                currentIndex = index;
+                deviceDisplay.src = images[index];
+            });
+        });
+    </script>
+</body>
+</html>

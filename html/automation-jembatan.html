@@ -16,6 +16,12 @@
 </head>
 
 <body>
+    <div id="splash-screen">
+        <img src="../public/logo/logo-hasil-karya.png" alt="Logo" id="splash-logo">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="../html/index.html">
@@ -69,7 +75,7 @@
                 </li>
             </ul>
             <div class="dropdown login-dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                <a class="btn btn-secondary dropdown-toggle dropdown-toggle-login" href="#" role="button" id="dropdownMenuLink"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Login   
                 </a>
@@ -548,6 +554,19 @@
           once: true, 
         });
       </script>
+          <script>
+            window.addEventListener('load', () => {
+                const splashScreen = document.getElementById('splash-screen');
+                const content = document.getElementById('content');
+    
+                setTimeout(() => {
+                    splashScreen.style.opacity = '0';
+                    splashScreen.style.display = 'none';
+                    content.style.display = 'block';
+                }, 3000); // Waktu splash screen (3 detik)
+            });
+        </script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

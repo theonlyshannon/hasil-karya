@@ -298,3 +298,32 @@
     font-family: 'Poppins';
   }
   /* footer section end */
+
+  @media (max-width: 768px) {
+    .navbar-brand {
+      padding-left: 10px;
+    }
+    .navbar-brand img {
+      max-height: 50px;
+    }
+    .footer-content {
+      flex-direction: column; /* Elemen berada dalam satu kolom */
+      text-align: center; /* Pusatkan teks */
+    }
+  
+    .call-center {
+      text-align: center; /* Agar selaras di layar kecil */
+      margin-top: 25px;
+      margin-left: 3.3rem;
+    }
+  
+    .footer-check-container {
+      flex-direction: column; /* Elemen dalam satu kolom */
+      gap: 5px; /* Kurangi jarak antar elemen */
+    }
+    .img-container img {
+      max-width: 230px;
+      height: auto;
+  }
+  
+  }

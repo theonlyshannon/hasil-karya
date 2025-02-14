@@ -21,7 +21,8 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #54DBEE; /* Warna background */
+  background: url('../public/splash-background.png') no-repeat center center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;

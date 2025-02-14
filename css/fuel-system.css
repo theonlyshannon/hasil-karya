@@ -142,7 +142,7 @@ nav,
 /* Dropdown Login */
 #dropdownMenuLink {
   background-color: #2E8C93;
-  padding: 12px 18px; 
+  padding: 12px 60px; 
   color: white;
   border: none;
   outline: none;
@@ -152,6 +152,9 @@ nav,
   background-color:#2E8C93;
   color: white;
   padding: 1rem;
+}
+.dropdown-toggle-login::after {
+  display: none;
 }
   /* navbar css end */
 
@@ -394,3 +397,69 @@ nav,
   font-family: 'Poppins';
 }
 /* footer section end */
+
+@media (max-width: 768px) {
+  .container-brigde {
+    margin-bottom: 5rem;
+  }
+  .hero-label {
+    font-size: 24px; 
+  }
+  .automation-jembatan-hero img {
+    max-width: 100%; /* Gambar tidak akan melebihi lebar container */
+    height: 100px; /* Menjaga proporsi gambar */
+    display: block; 
+    margin: 20px auto; 
+  }
+  .automation-bridge-label {
+    font-size: 24px; 
+    font-family: 'poppins'; 
+    line-height: 1.4; 
+    margin: 1.5rem 0; 
+    font-weight: bold;
+  }
+  .bridge-img img {
+    max-width: 100%; /* Gambar tidak akan melebihi lebar container */
+    height: 100%; /* Menjaga proporsi gambar */
+  }
+  .navbar-brand {
+    padding-left: 10px;
+  }
+  .navbar-brand img {
+    max-height: 50px;
+  }
+  .footer-content {
+    flex-direction: column; /* Elemen berada dalam satu kolom */
+    text-align: center; /* Pusatkan teks */
+  }
+
+  .call-center {
+    text-align: center; /* Agar selaras di layar kecil */
+    margin-top: 25px;
+    margin-left: 5rem;
+  }
+
+  .footer-check-container {
+    flex-direction: column; /* Elemen dalam satu kolom */
+    gap: 5px; /* Kurangi jarak antar elemen */
+  }
+  .card-interest .row {
+    flex-direction: column;
+}
+
+.card-body-interest {
+  margin-top: 2rem;
+}
+
+.card-interest .col-4,
+.card-interest .col-8 {
+    width: 100%;
+}
+.fuel-system-label {
+  font-size: 24px;
+}
+.card-usage {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+}

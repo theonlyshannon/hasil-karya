@@ -579,4 +579,16 @@ nav,
     flex-direction: column; /* Elemen dalam satu kolom */
     gap: 5px; /* Kurangi jarak antar elemen */
   }
+  .card-interest .row {
+    flex-direction: column;
+}
+
+.card-interest .col-4,
+.card-interest .col-8 {
+    width: 100%;
+}
+
+.card-interest-img img {
+    margin-top: 2rem;
+}
 }
