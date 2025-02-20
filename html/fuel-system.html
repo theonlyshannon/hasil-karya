@@ -83,8 +83,8 @@
     <!-- navbar end -->
 
     <!-- hero start -->
-    <!-- <div class="container container-hero">
-        <div class="hero-text text-center">
+    <div class="container container-hero">
+        <div class="hero-text text-center mb-5">
             <h2 class="hero-label" data-aos="fade-up">
                 Fuel System Membantu Anda Untuk Pengisian Bahan Bakar yang Transparan dan Akurat
             </h2>
@@ -94,23 +94,66 @@
                 bakar secara otomatis dikirim ke website SiMonRo.
             </p>
         </div>
+    
+        <div>
+            <div class="card card-hero">
+                <!-- Left side description text -->
+                <div class="fuel-description">
+                    Dengan sistem ini, pengguna dapat memonitor jumlah bahan bakar yang dikeluarkan setiap waktu, sehingga potensi kecurangan dapat diminimalkan.
+                </div>
+                
+                <!-- Center device display -->
+                <div class="fuel-device text-center">
+                    <div class="fuel-device-slider">
+                        <div class="fuel-device-slide active">
+                            <img src="../public/fuel-system/fuel-system-box1.png" alt="">
+                        </div>
+                        <div class="fuel-device-slide">
+                            <img src="../public/fuel-system/fuel-system-box2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Side view label with arrow -->
+                <div class="side-view-label">
+                    <span>Tampak Samping</span>
+                </div>
+                
+                <!-- Preview images on right -->
+                <div class="preview-container">
+                    <div class="preview-image-box">
+                        <img src="../public/fuel-system/fuel-box-preview1.png" alt="">
+                    </div>
+                    <div class="preview-image-box">
+                        <img src="../public/fuel-system/fuel-box-preview.png" alt="">
+                    </div>
+                </div>
+                
+                <!-- Feature tags -->
+                <div class="feature-tag rfid-tag">
+                    <img src="../public/fuel-system/icon.png" alt="" style="margin-right: 10px;">
+                    Penggunaan Kartu RFID
+                </div>
+                
+                <div class="feature-tag realtime-tag">
+                    <img src="../public/fuel-system/icon.png" alt="" style="margin-right: 10px;">
+                    Data Realtime
+                </div>
+                
+                <div class="feature-tag risk-tag">
+                    <img src="../public/fuel-system/icon.png" alt="" style="margin-right: 10px;">
+                    Mengurangi Resiko Kecurangan
+                </div>
+                
+                <!-- Navigation dots -->
+                <div class="nav-controls">
+                    <button class="nav-dot prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-dot next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+                </div>
 
-        <div class="container position-relative mt-5">
-            <div class="d-flex justify-content-center position-relative">
-                <div class="hero-text">
-                    <p>
-                        Dengan sistem ini, pengguna dapat memonitor jumlah bahan bakar yang dikeluarkan setiap waktu, sehingga potensi kecurangan dapat diminimalkan.
-                    </p>
-                </div>
-                <div class="card card-hero">
-                    <img src="../public/fuel-system/fuel-system-box1.png" alt="Icon" class="icon">
-                </div>
-                        
-                <img src="../public/fuel-system/fuel-system-box1.png" alt="" class="fuel-box"> 
             </div>
         </div>
-        
-    </div> -->
+    </div>
     <!-- hero end -->
 
     <!-- Why Using Fuel System Start -->
@@ -501,6 +544,20 @@
     </div>
     <!-- footer section end -->
 
+    
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.fuel-device-slide');
+
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Inisialisasi tampilan awal
+        slides[0].classList.add('active');
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({

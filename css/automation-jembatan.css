@@ -10,7 +10,8 @@
   margin-top: 10rem;
 }
 .container-hero {
-  padding: 3rem;
+  padding: 3rem; 
+  min-height: 100vh; 
 }
 
 /* container spacing */
@@ -129,7 +130,7 @@
 }
 
 body {
-  /* padding-top: 12rem; */
+  /* padding-top: 9rem; */
   margin-top: 0;
 }
 
@@ -577,11 +578,22 @@ nav,
   .hero-label {
     font-size: 24px; 
   }
+  .container-when {
+    margin-top: 1rem;
+}
+.container-hero {
+  padding: 1rem; 
+
+}
+  .automation-jembatan-hero {
+    display: flex;
+    justify-content: center; /* Agar gambar tetap di tengah */
+  }
+
   .automation-jembatan-hero img {
-    max-width: 100%; /* Gambar tidak akan melebihi lebar container */
-    height: 100px; /* Menjaga proporsi gambar */
-    display: block; 
-    margin: 20px auto; 
+    width: 90%; /* Sesuaikan dengan 90% dari container */
+    max-width: 500px; /* Maksimal lebar gambar agar tidak terlalu besar */
+    height: auto; /* Mempertahankan proporsi */
   }
   .automation-bridge-label {
     font-size: 24px; 

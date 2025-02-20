@@ -62,7 +62,8 @@
                             <a class="dropdown-item" href="../html/fuel-system.html">Fuel System Dispenser Solar</a>
                             <a class="dropdown-item" href="../html/ews.html">Early Warning System Banjir dan Gempa
                                 Bumi</a>
-                            <a class="dropdown-item" href="../html/automation-jembatan.html">Automation Jembatan Timbang
+                            <a class="dropdown-item" href="../html/automation-jembatan.html">
+                                Automation Jembatan Timbang
                                 & Portal Gate</a>
                             <a class="dropdown-item" href="#">Solar Cell</a>
                             <a class="dropdown-item" href="#">CCTV Wireless Proyek</a>
@@ -74,9 +75,9 @@
                 </li>
             </ul>
             <div class="dropdown login-dropdown">
-                <a class="btn btn-secondary dropdown-toggle dropdown-toggle-login" href="#" role="button" id="dropdownMenuLink"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Login 
+                <a class="btn btn-secondary dropdown-toggle dropdown-toggle-login" href="#" role="button"
+                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Login
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item login" href="https://ews.hasilkarya.co.id">Login EWS</a>
@@ -88,7 +89,7 @@
     <!-- navbar end -->
 
     <!-- hero start -->
-    <!-- <div class="container container-hero position-relative">
+    <div class="container container-hero position-relative">
         <div class="container position-relative mt-5">
             <div id="carouselExampleCaptions" class="carousel slide">
                 <div class="carousel-inner">
@@ -160,7 +161,7 @@
                     </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- hero end -->
 
@@ -230,40 +231,46 @@
     <div class="project-section">
         <div class="container">
             <h2 class="text-center section-title">Inovasi dan Proyek Terbaik dari Tim Divisi IT Hasil Karya</h2>
-            <p class="text-center section-subtitle">Bersama Hasil Karya, kami telah membantu berbagai klien mewujudkan visi mereka menjadi kenyataan</p>
-    
+            <p class="text-center section-subtitle">Bersama Hasil Karya, kami telah membantu berbagai klien mewujudkan
+                visi mereka menjadi kenyataan</p>
+
             <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="carousel-card">
-                                    <img src="../public/index/instalasi-jaringan-internet.png" alt="Instalasi Jaringan Internet">
+                                    <img src="../public/index/instalasi-jaringan-internet.png"
+                                        alt="Instalasi Jaringan Internet">
                                     <h5 class="carousel-card-title text-center">Instalasi Jaringan Internet</h5>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="carousel-card">
-                                    <img src="../public/index/instalasi-jaringan-internet.png" alt="Instalasi EWS Monitoring">
+                                    <img src="../public/index/instalasi-jaringan-internet.png"
+                                        alt="Instalasi EWS Monitoring">
                                     <h5 class="carousel-card-title text-center">Instalasi EWS Monitoring</h5>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="carousel-card">
-                                    <img src="../public/index/instalasi-jaringan-internet.png" alt="Solar Panel Installation">
+                                    <img src="../public/index/instalasi-jaringan-internet.png"
+                                        alt="Solar Panel Installation">
                                     <h5 class="carousel-card-title text-center">Solar Panel Installation</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="carousel-controls">
-                    <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel"
+                        data-bs-slide="prev">
                         <i class="fas fa-arrow-left"></i>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel"
+                        data-bs-slide="next">
                         <i class="fas fa-arrow-right"></i>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -274,7 +281,7 @@
     <!-- featured it product end -->
 
     <!-- featured sipil product start -->
-    <!-- <div class="container container-civil-product mb-5" id="civil-product">
+    <div class="container container-civil-product mb-5" id="civil-product">
         <div class="featured-product-text text-center">
             <h2 style="font-weight: bold;">
                 Inovasi dan Proyek Terbaik dari Tim Divisi Sipil Hasil Karya
@@ -413,7 +420,7 @@
             <i class="fa-solid fa-arrow-left button-circle" style="color:#fff;"></i>
             <i class="fa-solid fa-arrow-right button-circle" style="color:#fff;"></i>
         </div>
-    </div> -->
+    </div>
     <!--  -->
 
     <!-- Modal dengan Carousel -->
@@ -606,6 +613,69 @@
     </script>
 
     <script src="../js/custom.js"></script>
+    <script>
+        const toggleButton = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('#navbarNav');
+
+        // Mencegah default behavior
+        toggleButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (navbarCollapse.classList.contains('show')) {
+                closeNavbar();
+            } else {
+                openNavbar();
+            }
+        });
+
+        // Fungsi untuk membuka navbar
+        function openNavbar() {
+            const overlay = createOverlay();
+            document.body.appendChild(overlay);
+
+            // Memberikan delay kecil untuk memastikan transisi berjalan
+            setTimeout(() => {
+                navbarCollapse.classList.add('show');
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden'; // Mencegah scroll
+            }, 50);
+        }
+
+        // Fungsi untuk menutup navbar
+        function closeNavbar() {
+            const overlay = document.querySelector('.navbar-overlay');
+            navbarCollapse.classList.remove('show');
+            if (overlay) {
+                overlay.classList.remove('show');
+                // Menunggu animasi selesai sebelum menghapus overlay
+                setTimeout(() => {
+                    overlay.remove();
+                }, 300);
+            }
+            document.body.style.overflow = ''; // Mengembalikan scroll
+        }
+
+        // Fungsi untuk membuat overlay
+        function createOverlay() {
+            const overlay = document.createElement('div');
+            overlay.className = 'navbar-overlay';
+            overlay.addEventListener('click', closeNavbar);
+            return overlay;
+        }
+
+        // Menutup navbar ketika link diklik
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeNavbar);
+        });
+
+        // Mencegah click event bubble ke parent
+        navbarCollapse.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

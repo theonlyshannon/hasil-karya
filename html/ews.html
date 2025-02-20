@@ -58,7 +58,8 @@
                             <a class="dropdown-item" href="../html/fuel-system.html">Fuel System Dispenser Solar</a>
                             <a class="dropdown-item" href="../html/ews.html">Early Warning System Banjir dan Gempa
                                 Bumi</a>
-                            <a class="dropdown-item" href="../html/automation-jembatan.html">Automation Jembatan Timbang
+                            <a class="dropdown-item" href="../html/automation-jembatan.html">
+                                Automation Jembatan Timbang
                                 & Portal Gate</a>
                             <a class="dropdown-item" href="#">Solar Cell</a>
                             <a class="dropdown-item" href="#">CCTV Wireless Proyek</a>
@@ -70,9 +71,9 @@
                 </li>
             </ul>
             <div class="dropdown login-dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Login 
+                <a class="btn btn-secondary dropdown-toggle dropdown-toggle-login" href="#" role="button"
+                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Login
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item login" href="https://ews.hasilkarya.co.id">Login EWS</a>
@@ -100,7 +101,7 @@
         </div>
 
         <div class="ews-hero-image">
-            <img src="../public/ews/ews-hero.png" alt="EWS">
+            <img src="../public/ews/ews-hero.png" alt="EWS" class="img-fluid">
         </div>
 
     </div>
@@ -109,7 +110,7 @@
     <!-- why using ews start -->
     <div class="container container-ews">
         <div class="row">
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="card card-feature text-center">
                     <div class="card-body">
                         <div class="card-image d-flex justify-content-center my-2">
@@ -121,12 +122,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <div class="ews-text text-center">
                     <h4 style="font-weight: bold; font-size: 40px;">Mengapa Perlu Menggunakan EWS ?</h4>
                 </div>
             </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="card card-feature text-center">
                     <div class="card-body">
                         <div class="card-image d-flex justify-content-center my-2">
@@ -142,7 +143,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="350">
+            <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="350">
                 <div class="card card-feature text-center">
                     <div class="card-body">
                         <div class="card-image d-flex justify-content-center my-2">
@@ -156,7 +157,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="450">
+            <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="450">
                 <div class="card card-feature text-center">
                     <div class="card-body">
                         <div class="card-image d-flex justify-content-center my-2">
@@ -169,7 +170,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="550">
+            <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="550">
                 <div class="card card-feature text-center">
                     <div class="card-body">
                         <div class="card-image d-flex justify-content-center my-2">
@@ -303,7 +304,6 @@
             <div class="ews-cards">
                 <div class="card-ews">
                     <div class="card-img">
-                        <p style="font-weight: bold;">Komponen Alat Ews</p>
                         <img src="../public/ews/box 1.png" alt="Box" style="margin-bottom: 5rem; margin-top: 5rem;">
                     </div>
                     <div class="card-text">
@@ -513,7 +513,6 @@
     </div>
     <!-- interested product end -->
 
-
     <!-- footer section start -->
     <div class="card-footer">
 
@@ -561,6 +560,69 @@
     </div>
     <!-- footer section end -->
 
+    <script>
+        const toggleButton = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('#navbarNav');
+
+        // Mencegah default behavior
+        toggleButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (navbarCollapse.classList.contains('show')) {
+                closeNavbar();
+            } else {
+                openNavbar();
+            }
+        });
+
+        // Fungsi untuk membuka navbar
+        function openNavbar() {
+            const overlay = createOverlay();
+            document.body.appendChild(overlay);
+
+            // Memberikan delay kecil untuk memastikan transisi berjalan
+            setTimeout(() => {
+                navbarCollapse.classList.add('show');
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden'; // Mencegah scroll
+            }, 50);
+        }
+
+        // Fungsi untuk menutup navbar
+        function closeNavbar() {
+            const overlay = document.querySelector('.navbar-overlay');
+            navbarCollapse.classList.remove('show');
+            if (overlay) {
+                overlay.classList.remove('show');
+                // Menunggu animasi selesai sebelum menghapus overlay
+                setTimeout(() => {
+                    overlay.remove();
+                }, 300);
+            }
+            document.body.style.overflow = ''; // Mengembalikan scroll
+        }
+
+        // Fungsi untuk membuat overlay
+        function createOverlay() {
+            const overlay = document.createElement('div');
+            overlay.className = 'navbar-overlay';
+            overlay.addEventListener('click', closeNavbar);
+            return overlay;
+        }
+
+        // Menutup navbar ketika link diklik
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeNavbar);
+        });
+
+        // Mencegah click event bubble ke parent
+        navbarCollapse.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+        });
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
