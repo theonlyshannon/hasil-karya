@@ -19,7 +19,7 @@
 /* container spacing */
 
 /* navbar css */
-/* Base styles */
+
 * {
   padding: 0;
   margin: 0;
@@ -832,5 +832,12 @@ nav,
 
 .ews-hero-image {
   height: 250px;
+}
+
+.login-dropdown .dropdown-menu {
+  background-color: #2E8C93;
+  color: white;
+  padding-left: 8rem;
+  padding-right: 110px;
 }
 }

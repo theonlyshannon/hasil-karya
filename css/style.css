@@ -243,7 +243,7 @@ nav,
 /* Login dropdown styles */
 #dropdownMenuLink {
   background-color: #2E8C93;
-  padding: 12px 60px;
+  padding: 15px 60px;
   color: white;
   border: none;
   outline: none;
@@ -1178,8 +1178,6 @@ div .card-text {
 .card-client {
   border-radius: 20px;
   padding: 1rem;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
   position: relative;
   border: none; 
   outline: none;
@@ -1187,15 +1185,13 @@ div .card-text {
 }
 .card-client-pp {
   padding: 1rem;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
   position: relative;
   border: none; 
   outline: none;
   border-radius: 16px;
 }
 .card-image img {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
 }
@@ -1203,5 +1199,15 @@ div .card-text {
   max-width: 90%;
   height: auto;
   object-fit: cover;
+}
+.feature-label {
+  font-size: 10px;
+}
+
+.login-dropdown .dropdown-menu {
+  background-color: #2E8C93;
+  color: white;
+  padding-left: 8rem;
+  padding-right: 110px;
 }
 }
