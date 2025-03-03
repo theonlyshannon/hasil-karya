@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../public/logo/logo-hasil-karya.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/fuel-system.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Fuel System</title>
@@ -57,7 +58,8 @@
                             <a class="dropdown-item" href="../html/fuel-system.html">Fuel System Dispenser Solar</a>
                             <a class="dropdown-item" href="../html/ews.html">Early Warning System Banjir dan Gempa
                                 Bumi</a>
-                            <a class="dropdown-item" href="../html/automation-jembatan.html">Automation Jembatan Timbang
+                            <a class="dropdown-item" href="../html/automation-jembatan.html">
+                                Automation Jembatan Timbang
                                 & Portal Gate</a>
                             <a class="dropdown-item" href="#">Solar Cell</a>
                             <a class="dropdown-item" href="#">CCTV Wireless Proyek</a>
@@ -69,9 +71,9 @@
                 </li>
             </ul>
             <div class="dropdown login-dropdown">
-                <a class="btn btn-secondary dropdown-toggle dropdown-toggle-login" href="#" role="button" id="dropdownMenuLink"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Login 
+                <a class="btn btn-secondary dropdown-toggle dropdown-toggle-login" href="#" role="button"
+                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Login
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item login" href="https://ews.hasilkarya.co.id">Login EWS</a>
@@ -83,10 +85,11 @@
     <!-- navbar end -->
 
     <!-- hero start -->
-    <div class="container container-hero">
+    <div class="container container-hero ">
         <div class="hero-text text-center mb-5">
             <h2 class="hero-label" data-aos="fade-up">
-                Fuel System Membantu Anda Untuk Pengisian Bahan Bakar yang Transparan dan Akurat
+                Fuel System Membantu Anda Untuk <span style="color: #54DBEE;">Pengisian Bahan Bakar</span> yang <span style="color: #54DBEE;">Transparan</span>
+                 dan Akurat
             </h2>
             <p class="hero-text" data-aos="fade-up" data-aos-delay="100">
                 Fuel System Dispenser adalah sistem berbasis Internet of Things (IoT) yang dirancang Sistem ini
@@ -95,41 +98,33 @@
             </p>
         </div>
     
-        <div>
+        <div class="d-flex justify-content-center">
             <div class="card card-hero">
-                <!-- Left side description text -->
+
                 <div class="fuel-description">
                     Dengan sistem ini, pengguna dapat memonitor jumlah bahan bakar yang dikeluarkan setiap waktu, sehingga potensi kecurangan dapat diminimalkan.
                 </div>
                 
-                <!-- Center device display -->
                 <div class="fuel-device text-center">
                     <div class="fuel-device-slider">
                         <div class="fuel-device-slide active">
                             <img src="../public/fuel-system/fuel-system-box1.png" alt="">
                         </div>
                         <div class="fuel-device-slide">
-                            <img src="../public/fuel-system/fuel-system-box2.png" alt="">
+                            <img src="../public/fuel-system/fuel-box-preview.png" alt="">
                         </div>
                     </div>
                 </div>
                 
-                <!-- Side view label with arrow -->
-                <div class="side-view-label">
-                    <span>Tampak Samping</span>
-                </div>
-                
-                <!-- Preview images on right -->
                 <div class="preview-container">
-                    <div class="preview-image-box">
+                    <div class="preview-image-box active" onclick="selectSlide(0)">
                         <img src="../public/fuel-system/fuel-box-preview1.png" alt="">
                     </div>
-                    <div class="preview-image-box">
+                    <div class="preview-image-box" onclick="selectSlide(1)">
                         <img src="../public/fuel-system/fuel-box-preview.png" alt="">
                     </div>
                 </div>
                 
-                <!-- Feature tags -->
                 <div class="feature-tag rfid-tag">
                     <img src="../public/fuel-system/icon.png" alt="" style="margin-right: 10px;">
                     Penggunaan Kartu RFID
@@ -145,7 +140,6 @@
                     Mengurangi Resiko Kecurangan
                 </div>
                 
-                <!-- Navigation dots -->
                 <div class="nav-controls">
                     <button class="nav-dot prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
                     <button class="nav-dot next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
@@ -169,7 +163,7 @@
 
         <div class="fuel-system-list">
             <div class="row my-3">
-                <div class="col" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="d-flex align-items-start">
                         <div class="number-circle" style="color: #24273B; font-family: 'poppins';">01</div>
                         <h3 style="color: #24273B; font-family: 'poppins'; margin-left: 1rem; margin-top: 7px; font-size: 24px;">
@@ -177,7 +171,7 @@
                         </h3>
                     </div>
                 </div>
-                <div class="col" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <p style="color: #5D5D5D; font-family: 'poppins';">
                         Sistem pengukuran presisi memastikan bahan bakar dikeluarkan sesuai takaran, mengurangi risiko
                         kehilangan, akibat ketidaksesuaian volume.
@@ -187,7 +181,7 @@
             <div class="line"></div>
     
             <div class="row my-3">
-                <div class="col" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="d-flex align-items-start">
                         <div class="number-circle" style="color: #24273B; font-family: 'poppins';">02</div>
                         <h3 style="color: #24273B; font-family: 'poppins'; margin-left: 1rem; margin-top: 7px; font-size: 24px;">
@@ -195,7 +189,7 @@
                         </h3>
                     </div>
                 </div>
-                <div class="col" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <p style="color: #5D5D5D; font-family: 'poppins';">
                         Data solar tercatat otomatis dan dapat diakses via website, menciptakan transparansi dan
                         meningkatkan kepercayaan.
@@ -205,7 +199,7 @@
             <div class="line"></div>
     
             <div class="row my-3">
-                <div class="col" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="d-flex align-items-start">
                         <div class="number-circle" style="color: #24273B; font-family: 'poppins';">03</div>
                         <h3 style="color: #24273B; font-family: 'poppins'; margin-left: 1rem; margin-top: 7px; font-size: 24px;">
@@ -213,7 +207,7 @@
                         </h3>
                     </div>
                 </div>
-                <div class="col" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <p style="color: #5D5D5D; font-family: 'poppins';">
                         Dispenser Solar menggantikan pencatatan manual dengan sistem digital yang akurat dan mudah diakses.
                     </p>
@@ -222,7 +216,7 @@
             <div class="line"></div>
     
             <div class="row my-3">
-                <div class="col" data-aos="fade-up" data-aos-delay="500">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
                     <div class="d-flex align-items-start">
                         <div class="number-circle" style="color: #24273B; font-family: 'poppins';">04</div>
                         <h3 style="color: #24273B; font-family: 'poppins'; margin-left: 1rem; margin-top: 7px; font-size: 24px;">
@@ -230,7 +224,7 @@
                         </h3>
                     </div>
                 </div>
-                <div class="col" data-aos="fade-up" data-aos-delay="600">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
                     <p style="color: #5D5D5D; font-family: 'poppins';">
                         Dispenser Solar mendukung keberlanjutan dan akuntabilitas dengan pengelolaan bahan bakar yang
                         transparan dan efisien.
@@ -256,8 +250,8 @@
                         <div class="card-image d-flex justify-content-center my-2">
                             <img src="../public/fuel-system/Note.png" alt="Pencatatan Bahan Bakar">
                         </div>
-                        <h4 class="card-title mt-4">Ketika Proyek Membutuhkan Pengelolaan Bahan Bakar </h4>
-                        <p class="card-text my-3">
+                        <h4 class="card-title-when mt-4">Ketika Proyek Membutuhkan Pengelolaan Bahan Bakar </h4>
+                        <p class="card-text-when my-3">
                             Dispenser Solar memastikan pengukuran presisi dan mengurangi selisih bahan bakar dalam
                             proyek besar.
                         </p>
@@ -271,8 +265,8 @@
                             <img src="../public/fuel-system/Note-1.png"
                                 alt="Pencatatan Volume Material">
                         </div>
-                        <h4 class="card-title mt-4">Saat Terjadi Masalah Ketidaksesuaian Takaran</h4>
-                        <p class="card-text my-3">Dispenser Solar dapat mengatasi ketidaktepatan ini dengan sistem
+                        <h4 class="card-title-when mt-4">Saat Terjadi Masalah Ketidaksesuaian Takaran</h4>
+                        <p class="card-text-when my-3">Dispenser Solar dapat mengatasi ketidaktepatan ini dengan sistem
                             otomatis yang akurat.</p>
                     </div>
                 </div>
@@ -283,9 +277,9 @@
                         <div class="card-image d-flex justify-content-center my-2">
                             <img src="../public/fuel-system/Note-2.png" alt="Pencatatan Bahan Bakar">
                         </div>
-                        <h4 class="card-title mt-4">Dalam Proyek dengan Mobilitas Tinggi</h4>
-                        <p class="card-text my-3">
-                            Proyek dengan kendaraan operasional seperti alat berat, dan truk membutuhkan pengisian
+                        <h4 class="card-title-when mt-4">Dalam Proyek dengan Mobilitas Tinggi</h4>
+                        <p class="card-text-when my-3">
+                            Proyek dengan kendaraan operasional seperti alat berat, dan truk membutuhkan pengisian
                             efisien
                         </p>
                     </div>
@@ -299,8 +293,8 @@
                         <div class="card-image d-flex justify-content-center my-2">
                             <img src="../public/fuel-system/Note-3.png" alt="Pencatatan Bahan Bakar">
                         </div>
-                        <h4 class="card-title mt-4">Ketika Ingin Mencegah Kecurangan Pengisian Solar</h4>
-                        <p class="card-text my-3">
+                        <h4 class="card-title-when mt-4">Ketika Ingin Mencegah Kecurangan Pengisian Solar</h4>
+                        <p class="card-text-when my-3">
                             Setiap driver atau operator memiliki kartu identitas yang terintegrasi dengan sistem SiMonRo
                             untuk pengisian solar.
                         </p>
@@ -314,8 +308,8 @@
                             <img src="../public/fuel-system/Note-4.png"
                                 alt="Pencatatan Volume Material">
                         </div>
-                        <h4 class="card-title mt-4">Ketika Ingin Mendapatkan Pelaporan Real-Time</h4>
-                        <p class="card-text my-3">
+                        <h4 class="card-title-when mt-4">Ketika Ingin Mendapatkan Pelaporan Real-Time</h4>
+                        <p class="card-text-when my-3">
                             Dispenser Solar terintegrasi web SiMonRo yang menyediakan laporan penggunaan bahan bakar dan
                             bisa diakses kapan saja.
                         </p>
@@ -328,8 +322,8 @@
                         <div class="card-image d-flex justify-content-center my-2">
                             <img src="../public/fuel-system/Note-5.png" alt="Pencatatan Bahan Bakar">
                         </div>
-                        <h4 class="card-title mt-4">Ketika Sistem Manual Tidak Lagi Efektif</h4>
-                        <p class="card-text my-3">
+                        <h4 class="card-title-when mt-4">Ketika Sistem Manual Tidak Lagi Efektif</h4>
+                        <p class="card-text-when my-3">
                             Sistem pencatatan manual yang memakan waktu dan rentan kesalahan dapat digantikan dengan
                             Dispenser Solar.
                         </p>
@@ -548,17 +542,91 @@
     <script>
         let currentSlide = 0;
         const slides = document.querySelectorAll('.fuel-device-slide');
+        const previews = document.querySelectorAll('.preview-image-box');
 
-        function changeSlide(direction) {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        function showSlide(index) {
+            if (index >= slides.length) currentSlide = 0;
+            if (index < 0) currentSlide = slides.length - 1;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            previews.forEach(preview => preview.classList.remove('active'));
+            
             slides[currentSlide].classList.add('active');
+            previews[currentSlide].classList.add('active');
         }
 
-        // Inisialisasi tampilan awal
-        slides[0].classList.add('active');
+        function changeSlide(direction) {
+            currentSlide += direction;
+            showSlide(currentSlide);
+        }
+
+        function selectSlide(index) {
+            currentSlide = index;
+            showSlide(currentSlide);
+        }
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const toggleButton = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('#navbarNav');
+
+        // Mencegah default behavior
+        toggleButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (navbarCollapse.classList.contains('show')) {
+                closeNavbar();
+            } else {
+                openNavbar();
+            }
+        });
+
+        // Fungsi untuk membuka navbar
+        function openNavbar() {
+            const overlay = createOverlay();
+            document.body.appendChild(overlay);
+
+            // Memberikan delay kecil untuk memastikan transisi berjalan
+            setTimeout(() => {
+                navbarCollapse.classList.add('show');
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden'; // Mencegah scroll
+            }, 50);
+        }
+
+        // Fungsi untuk menutup navbar
+        function closeNavbar() {
+            const overlay = document.querySelector('.navbar-overlay');
+            navbarCollapse.classList.remove('show');
+            if (overlay) {
+                overlay.classList.remove('show');
+                setTimeout(() => {
+                    overlay.remove();
+                }, 300);
+            }
+            document.body.style.overflow = '';
+        }
+
+        // Fungsi untuk membuat overlay
+        function createOverlay() {
+            const overlay = document.createElement('div');
+            overlay.className = 'navbar-overlay';
+            overlay.addEventListener('click', closeNavbar);
+            return overlay;
+        }
+
+        // Menutup navbar ketika link diklik
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeNavbar);
+        });
+
+        // Mencegah click event bubble ke parent
+        navbarCollapse.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+    </script>
     <script>
         AOS.init({
             once: true,

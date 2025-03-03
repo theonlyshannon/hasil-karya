@@ -262,6 +262,7 @@ nav,
 #dropdownMenuLink {
   background-color: #2E8C93;
   padding: 12px 60px;
+  margin-right: 2rem;
   color: white;
   border: none;
   outline: none;
@@ -383,6 +384,13 @@ nav,
     margin-bottom: 1.5rem;
     width: 100%;
     min-width: 100%;
+  }
+
+  .dropdown-menu-custom.show {
+    display: flex;
+  } 
+  .dropdown-menu-custom .dropdown-column:nth-child(2) {
+    order: -1; /* This moves the second column (DIVISI IT) to the front */
   }
 
   .dropdown-column:last-child {
@@ -542,6 +550,11 @@ nav,
   /* hero section end */
 
   /* why using automation brigde start */
+  .bridge-list-text {
+    font-family: 'poppins';
+    color: #5D5D5D;
+    font-size: 16px;  
+  }
   .automation-bridge-text {
     color: #24273B;
     font-family: 'poppins'; 
@@ -776,6 +789,18 @@ nav,
 }
 
 
+.footer-check-container {
+  display: flex;
+  gap: 30px; /* Jarak antar item */
+  font-family: 'Poppins';
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Jarak antara icon dan text */
+}
+
 .footer-circle-check {
   width: 25px;
   height: 25px;
@@ -784,13 +809,17 @@ nav,
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* Mencegah icon mengecil */
 }
 
-.footer-check-container {
+.check-text {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: 'Poppins';
+}
+
+.check-text p {
+  margin: 0;
+  white-space: nowrap; /* Mencegah text wrap */
 }
 /* footer section end */
 
@@ -836,20 +865,71 @@ nav,
     max-height: 50px;
   }
   .footer-content {
-    flex-direction: column; /* Elemen berada dalam satu kolom */
-    text-align: center; /* Pusatkan teks */
+    flex-direction: column;
+  }
+
+  .footer-content .card-text{
+    text-align: left;
   }
 
   .call-center {
-    text-align: center; /* Agar selaras di layar kecil */
+    text-align: left; 
     margin-top: 25px;
-    margin-left: 5rem;
+  }
+
+  .call-center-text {
+    font-size: 22px;
+    font-family: 'Poppins';
+    color: #fff;
   }
 
   .footer-check-container {
-    flex-direction: column; /* Elemen dalam satu kolom */
-    gap: 5px; /* Kurangi jarak antar elemen */
-  }
+    display: flex;
+    flex-direction: column;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+    /* gap: 14px; */
+}
+
+.check-item .check-text-2 {
+  margin-right: 20px;
+}
+
+.card-footer {
+  padding: 1rem;
+}
+
+.footer-circle-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00ff9d;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.footer-circle-check i {
+    font-size: 12px;
+    color: #000000;
+}
+
+.check-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.footer-card-text {
+  font-size: 14px;
+}
+
   .card-interest .row {
     flex-direction: column;
 }
@@ -867,6 +947,12 @@ nav,
   color: white;
   padding-left: 8rem;
   padding-right: 110px;
+}
+.bridge-list-text {
+  margin-top: 16px; 
+}
+.card-usage {
+  margin-bottom: 20px;
 }
 }
 

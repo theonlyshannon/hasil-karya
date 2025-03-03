@@ -1,147 +1,351 @@
 /* navbar css */
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 10rem;
+  margin-top: 0;
+}
+
+/* Navbar styles */
+nav,
+.navbar {
+  padding: 24px 80px;
+  box-shadow: 0 25px 25px rgba(35, 35, 35, 0.04);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  padding-left: 2rem;
+  position: relative;
+  z-index: 1002;
+}
+
+.navbar-brand img {
+  max-height: 90px;
+}
+
+.navbar-nav {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+  font-weight: bold;
+  color: #141B2A;
+  position: relative;
+}
+
+.nav-link {
+  color: #141B2A;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+  color: #135155;
+}
+
+/* Button styles */
+.btn-custom {
+  background-color: #2E8C93;
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 12px 18px;
+}
+
+.btn-custom:hover {
+  background-color: #247278;
+  color: white;
+}
+
+/* Desktop dropdown styles */
+.dropdown-menu-custom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 800px;
+  background-color: rgba(17, 111, 117, 0.9);
+  border-radius: 16px;
+  padding: 24px;
+  border: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.dropdown-menu-custom.show {
+  display: flex;
+}
+
+.dropdown-column {
+  flex: 1;
+  padding: 0 20px;
+  min-width: 350px;
+}
+
+.dropdown-header {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 1rem;
+  margin-bottom: 16px;
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.dropdown-item {
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 0;
+  background: transparent;
+  transition: color 0.2s ease, padding-left 0.3s ease-out;
+}
+
+.dropdown-item:hover {
+  color: #F7F7F7;
+  background: transparent;
+  padding-left: 7px;
+}
+
+/* Active state */
+.nav-item.dropdown .nav-link.active {
+  color: #2E8C93;
+  background-color: rgba(46, 140, 147, 0.1);
+  border-radius: 4px;
+}
+
+/* Login dropdown styles */
+#dropdownMenuLink {
+  background-color: #2E8C93;
+  padding: 12px 60px;
+  margin-right: 2rem;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.login-dropdown .dropdown-menu {
+  background-color: #2E8C93;
+  color: white;
+  padding: 1rem;
+}
+
+.dropdown-toggle-login::after {
+  display: none;
+}
+
+.dropdown-toggle.active {
+  color: #2E8C93 !important;
+  background-color: rgba(46, 140, 147, 0.1);
+  border-radius: 4px;
+}
+
+/* Mobile styles */
+@media (max-width: 991.98px) {
+  nav, .navbar {
+    padding: 15px 20px;
   }
-  
-  body {
-    padding-top: 10rem;
-    margin-top: 0;
+
+  .navbar-brand {
+    padding-left: 0;
   }
-  
-  nav,
-  .navbar {
-    padding: 24px 80px;
-    box-shadow: 0 25px 25px rgba(35, 35, 35, 0.04);
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.8);
-    font-family: 'poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
+
+  .navbar-brand img {
+    max-height: 60px;
+  }
+
+  #navbarNav {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    transition: all 0.3s ease-in-out;
+    padding: 80px 1.5rem 2rem 1.5rem;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+
+  #navbarNav.show {
+    right: 0;
+  }
+
+  .navbar-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  .navbar-overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-toggler {
+    position: fixed;
+    top: 25px;
+    right: 20px;
+    z-index: 1002;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .nav-item {
+    margin: 0.75rem 0;
     width: 100%;
   }
-  
-  .navbar-brand {
-    padding-left: 2rem;
-  }
-  
-  .navbar-brand img {
-    max-height: 90px;
-  }
-  
-  .navbar-nav {
-    flex-grow: 1;
-    justify-content: center;
-  }
-  
-  .nav-item {
-    margin: 0 0.5rem;
-    font-weight: bold;
-    color: #141B2A;
-    position: relative;
-  }
-  
+
   .nav-link {
-    color: #141B2A;
-    padding: 0.5rem 1rem;
+    font-size: 18px;
+    padding: 1rem;
+    display: block;
+    width: 100%;
   }
-  
-  .nav-link:hover {
-    color: #135155;
-  }
-  
-  .btn-custom {
-    background-color: #2E8C93;
-    color: white;
-    border: none;
-    padding: 8px 24px;
-    border-radius: 4px;
-    font-weight: 500;
-    padding: 12px 18px;
-  }
-  
-  .btn-custom:hover {
-    background-color: #247278;
-    color: white;
-  }
-  
-  /* Dropdown specific styles */
+
+  /* Mobile dropdown styles */
   .dropdown-menu-custom {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 800px;
-    background-color:rgba(17, 111, 117, 0.9);
-    border-radius: 16px;
-    padding: 24px;
-    border: none;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    min-width: 100%;
+    position: static;
+    transform: none;
+    background-color: rgba(17, 111, 117, 0.95);
+    padding: 1.5rem;
+    margin: 0.5rem 0;
     display: none;
+    flex-direction: column;
+    border-radius: 12px;
   }
-  
+
   .dropdown-menu-custom.show {
     display: flex;
   }
-  
+
   .dropdown-column {
-    flex: 1;
-    padding: 0 20px;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    min-width: 100%;
   }
-  
-  .dropdown-header {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 0 0 12px 0;
-    margin-bottom: 16px;
-    padding: 1rem;
-    width: 350px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.15);
+
+  .dropdown-column:last-child {
+    margin-bottom: 0;
+  }
+
+  .dropdown-menu-custom.show {
     display: flex;
-    align-items: center;
-    justify-content: center;
+  } 
+  .dropdown-menu-custom .dropdown-column:nth-child(2) {
+    order: -1; /* This moves the second column (DIVISI IT) to the front */
   }
-  
-  .dropdown-item {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 8px 0;
-    background: transparent;
-    transition: color 0.2s ease, padding-left 0.3s ease-out; 
-  }
-  
-  .dropdown-item:hover {
-    color: #F7F7F7;
-    background: transparent;
-    padding-left: 7px;
-  }
-  
-  /* Active state for Product nav-item */
-  .nav-item.dropdown .nav-link.active {
-    color: #2E8C93;
-    background-color: rgba(46, 140, 147, 0.1);
-    border-radius: 4px;
-  }
-  /* Dropdown Login */
-  #dropdownMenuLink {
-    background-color: #2E8C93;
-    padding: 12px 60px; 
-    color: white;
-    border: none;
-    outline: none;
-  }
-  
-  .login-dropdown .dropdown-menu {
-    background-color:#2E8C93;
-    color: white;
+
+
+  .dropdown-header {
+    width: 100%;
+    margin-bottom: 1rem;
+    height: auto;
     padding: 1rem;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(255, 255, 255, 0.2);
   }
-  .dropdown-toggle-login::after {
-    display: none;
+
+  .dropdown-item {
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease;
   }
+
+  .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 1.25rem;
+  }
+
+  .login-dropdown {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  #dropdownMenuLink {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .dropdown-column + .dropdown-column {
+    margin-top: 2rem;
+  }
+}
+
+/* Smaller screen adjustments */
+@media (max-width: 576px) {
+  body {
+    padding-top: 8rem;
+  }
+
+  nav, .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar-brand img {
+    max-height: 50px;
+  }
+
+  #navbarNav {
+    padding: 70px 1rem 1.5rem 1rem;
+  }
+
+  .navbar-toggler {
+    top: 20px;
+    right: 15px;
+  }
+
+  .dropdown-item {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+  
+} 
     /* navbar css end */
 
     /* container text */
@@ -251,52 +455,66 @@
     /* container text */
 
     /* footer section start */
-    .card-title-footer {
-
+    .card-footer {
+      padding: 2rem;
+      font-size: 16px;
+      font-family: 'Poppins';
+      color: #fff;
+      background-image: url('../public/footer.png');
+      background-size: cover;
+      background-position: center;
     }
-.card-footer {
-    padding: 2rem;
-    font-size: 16px;
-    font-family: 'Poppins';
-    color: #fff;
-    background-image: url('../public/footer.png');
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1.5rem;
-  }
-  
-  .call-center {
-    text-align: right;
-  }
-  
-  .call-center-text {
-    font-size: 22px;
-    font-family: 'Poppins';
-    color: #fff;
-  }
-  
-  .footer-circle-check {
-    width: 25px;
-    height: 25px;
-    background-color: #00D47E;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .footer-check-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Poppins';
-  }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    
+    .call-center {
+      text-align: right;
+    }
+    
+    .call-center-text {
+      font-size: 22px;
+      font-family: 'Poppins';
+      color: #fff;
+    }
+    
+    
+    .footer-check-container {
+      display: flex;
+      gap: 30px; /* Jarak antar item */
+      font-family: 'Poppins';
+    }
+    
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 10px; /* Jarak antara icon dan text */
+    }
+    
+    .footer-circle-check {
+      width: 25px;
+      height: 25px;
+      background-color: #00D47E;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0; /* Mencegah icon mengecil */
+    }
+    
+    .check-text {
+      display: flex;
+      align-items: center;
+    }
+    
+    .check-text p {
+      margin: 0;
+      white-space: nowrap; /* Mencegah text wrap */
+    }
   /* footer section end */
 
   @media (max-width: 768px) {
@@ -307,20 +525,71 @@
       max-height: 50px;
     }
     .footer-content {
-      flex-direction: column; /* Elemen berada dalam satu kolom */
-      text-align: center; /* Pusatkan teks */
+      flex-direction: column;
+    }
+  
+    .footer-content .card-text{
+      text-align: left;
     }
   
     .call-center {
-      text-align: center; /* Agar selaras di layar kecil */
+      text-align: left; 
       margin-top: 25px;
-      margin-left: 3.3rem;
+    }
+  
+    .call-center-text {
+      font-size: 22px;
+      font-family: 'Poppins';
+      color: #fff;
     }
   
     .footer-check-container {
-      flex-direction: column; /* Elemen dalam satu kolom */
-      gap: 5px; /* Kurangi jarak antar elemen */
-    }
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .check-item {
+      display: flex;
+      align-items: center;
+      margin-top: 5px; 
+      margin-bottom: 5px; 
+      /* gap: 14px; */
+  }
+  
+  .check-item .check-text-2 {
+    margin-right: 20px;
+  }
+  
+  .card-footer {
+    padding: 1rem;
+  }
+  
+  .footer-circle-check {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #00ff9d;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+  }
+  
+  .footer-circle-check i {
+      font-size: 12px;
+      color: #000000;
+  }
+  
+  .check-text p {
+      margin: 0;
+      font-size: 14px;
+      color: #ffffff;
+      font-weight: 400;
+  }
+  
+  .footer-card-text {
+    font-size: 14px;
+  }
+  
     .img-container img {
       max-width: 230px;
       height: auto;
