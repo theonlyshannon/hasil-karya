@@ -819,6 +819,24 @@
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            let navLinks = document.querySelectorAll(".navbar-nav .nav-item .nav-link");
+
+            let currentUrl = window.location.pathname.split("/").pop();
+
+            navLinks.forEach(link => {
+                let linkUrl = link.getAttribute("href").split("/").pop(); 
+
+                if (currentUrl === linkUrl || (currentUrl === "" && linkUrl === "index.html")) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+        });
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
             setTimeout(function () {
                 document.getElementById("splash-screen").style.opacity = "0"; // Efek fade-out
                 setTimeout(function () {

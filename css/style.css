@@ -234,11 +234,11 @@ nav,
 }
 
 /* Active state */
-.nav-item.dropdown .nav-link.active {
-  color: #2E8C93;
-  background-color: rgba(46, 140, 147, 0.1);
-  border-radius: 4px;
+.navbar-nav .nav-item .nav-link.active {
+  font-weight: bold;
+  color: #2E8C93 !important; 
 }
+
 
 /* Login dropdown styles */
 #dropdownMenuLink {
