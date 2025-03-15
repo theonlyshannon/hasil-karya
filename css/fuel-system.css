@@ -400,8 +400,9 @@ nav,
         margin: 1.5rem 0;
     }
     .card-hero {
-      width: 1248px; /* Sesuaikan ukuran */
-      height: 539px; /* Sesuaikan ukuran */
+      width: 100%; /* Makes it fluid instead of fixed width */
+      height: auto; /* Allows height to adjust proportionally */
+      max-width: 1248px; /* Optional: sets maximum width */
       background-image: url('../public/fuel-system/rectangle.png');
       background-size: cover;
       background-position: center;
@@ -410,7 +411,9 @@ nav,
       border: none;
       outline: none;
       overflow: hidden;
-  }
+      margin: 0 auto; /* Centers the element if desired */
+      padding-bottom: 43%; /* Creates aspect ratio similar to original dimensions */
+  }     
   
   /* Left side description */
   .fuel-description {
@@ -853,6 +856,9 @@ nav,
   .container-brigde {
     margin-bottom: 5rem;
   }
+  .container-hero{
+    margin-bottom: 5rem;
+}
   .hero-label {
     font-size: 24px; 
   }
@@ -949,5 +955,61 @@ nav,
 .nav-controls {
   right: 50px;
   bottom: 80px;
+}
+.card-hero {
+  padding-bottom: 56%; /* Adjust aspect ratio for mobile */
+}
+}
+
+/* Fuel device slider styles */
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fuel-device-slide img {
+    width: 333px;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .fuel-device {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    height: 450px;
+  }
+/*   
+  .fuel-description {
+    position: absolute;
+    font-family: 'poppins';
+    width: 100%;
+    text-align: center;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 500px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    padding: 0 20px;
+  }
+   */
+  .nav-controls {
+    position: absolute;
+    bottom: 50px;
+    top: 75%;
+    left: 48%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  .nav-controls button {
+    width: 25px; /* Atur ukuran tombol */
+    height: 25px;
+    font-size: 14px; /* Atur ukuran ikon */
+    padding: 5px;
 }
 }
