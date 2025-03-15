@@ -6,275 +6,507 @@
     <title>Carousel Grid Hasil Karya</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #f5f5f5;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+       /* Hero section styles */
+.hero-label {
+    font-size: 2.5rem;
+    font-family: 'poppins', sans-serif;
+    font-weight: bold;
+    color: #000;
+    line-height: 1.3;
+    margin: 1.5rem 0;
+}
+
+.text-highlight {
+    color: #54DBEE;
+}
+
+.hero-text {
+    font-size: 1rem;
+    font-family: 'poppins', sans-serif;
+    font-weight: normal;
+    color: #5D5D5D;
+    line-height: 1.6;
+    margin: 1rem 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-hero {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    aspect-ratio: 1248/539;
+    background-image: url('../public/fuel-system/rectangle.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+/* Fuel device styles */
+.fuel-device {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: auto;
+    max-width: 750px;
+}
+
+.fuel-device-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.fuel-device-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: none;
+}
+
+.fuel-device-slide.active {
+    opacity: 1;
+    display: block;
+}
+
+.fuel-device-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Left side description */
+.fuel-description {
+    position: absolute;
+    font-family: 'poppins', sans-serif;
+    top: 22%;
+    left: 6%;
+    max-width: 250px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Preview images */
+.preview-container {
+    position: absolute;
+    top: 33%;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.preview-image-box {
+    width: 95px;
+    height: 65px;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.preview-image-box.active {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.preview-image-box:hover {
+    opacity: 0.8;
+}
+
+.preview-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Feature tags */
+.feature-tags {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.feature-tag {
+    position: absolute;
+    background-color: white;
+    font-family: 'poppins', sans-serif;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    white-space: nowrap;
+    pointer-events: auto;
+}
+
+.feature-icon {
+    width: 14px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.rfid-tag {
+    top: 63%;
+    left: 28%;
+}
+
+.realtime-tag {
+    bottom: 15%;
+    left: 12%;
+}
+
+.risk-tag {
+    bottom: 9%;
+    right: 11%;
+}
+
+/* Navigation controls */
+.nav-controls {
+    position: absolute;
+    bottom: 22%;
+    right: 8%;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-dot {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #2A9D8F;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-dot:hover {
+    background-color: #238b7e;
+    transform: scale(1.1);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .hero-label {
+        font-size: 2.2rem;
+    }
+    
+    .fuel-device {
+        width: 55%;
+    }
+    
+    .preview-container {
+        right: 8%;
+    }
+    
+    .feature-tag {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-label {
+        font-size: 1.8rem;
+    }
+    
+    .hero-text {
+        font-size: 0.9rem;
+    }
+    
+    .fuel-device {
+        width: 50%;
+    }
+    
+    .fuel-description {
+        font-size: 0.8rem;
+        max-width: 200px;
+    }
+    
+    .preview-image-box {
+        width: 80px;
+        height: 55px;
+    }
+    
+    .rfid-tag {
+        top: 60%;
+        left: 25%;
+    }
+    
+    .realtime-tag {
+        bottom: 12%;
+        left: 10%;
+    }
+    
+    .risk-tag {
+        bottom: 8%;
+        right: 8%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-label {
+        font-size: 1.5rem;
+    }
+    
+    .card-hero {
+        aspect-ratio: 2/1;
+    }
+    
+    .fuel-device {
+        width: 70%;
+        top: 45%;
+    }
+    
+    .fuel-description {
+        max-width: 180px;
+        font-size: 0.75rem;
+        top: 18%;
+        left: 5%;
+    }
+    
+    .preview-container {
+        top: 18%;
+        right: 5%;
+        gap: 8px;
+    }
+    
+    .preview-image-box {
+        width: 60px;
+        height: 40px;
+        padding: 4px;
+    }
+    
+    .feature-tag {
+        font-size: 0.7rem;
+        padding: 5px 8px;
+    }
+    
+    .rfid-tag {
+        top: 50%;
+        left: 22%;
+    }
+    
+    .realtime-tag {
+        bottom: 25%;
+        left: 8%;
+    }
+    
+    .risk-tag {
+        bottom: 15%;
+        right: 5%;
+    }
+    
+    .nav-controls {
+        bottom: 10%;
+        right: 5%;
+    }
+    
+    .nav-dot {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-label {
+        font-size: 1.25rem;
+        margin: 1rem 0;
+    }
+    
+    .hero-text {
+        font-size: 0.8rem;
+        margin: 0.8rem 0;
+    }
+    
+    .card-hero {
+        aspect-ratio: 16/9;
+    }
+    
+    .fuel-device {
+        width: 80%;
+    }
+    
+    .fuel-description {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        font-size: 0.7rem;
+        text-align: center;
+        margin: 0.5rem auto;
+        padding: 0 1rem;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 5px;
+        width: 90%;
+    }
+    
+    .preview-container {
+        flex-direction: row;
+        top: auto;
+        right: auto;
+        bottom: 10px;
+        left: 10px;
+        gap: 5px;
+    }
+    
+    .preview-image-box {
+        width: 40px;
+        height: 30px;
+        padding: 2px;
+    }
+    
+    .feature-tag {
+        position: static;
+        margin: 0.2rem;
+        font-size: 0.6rem;
+        padding: 3px 6px;
+    }
+    
+    .feature-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: absolute;
+        bottom: 40px;
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .feature-icon {
+        width: 10px;
+        margin-right: 4px;
+    }
+    
+    .nav-controls {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .nav-dot {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-label {
+        font-size: 1.1rem;
+    }
+    
+    .hero-text {
+        font-size: 0.75rem;
+    }
+    
+    .fuel-device {
+        width: 90%;
+    }
+    
+    .feature-tag {
+        font-size: 0.55rem;
+        padding: 2px 4px;
+    }
+    
+    .nav-dot {
+        width: 22px;
+        height: 22px;
+        font-size: 10px;
+    }
+}
 
     </style>
 </head>
 <body>
-    <div class="carousel-container">
-        <h2 class="heading">Produk Unggulan yang Telah di Wujudkan Tim Divisi Sipil Hasil Karya</h2>
-        <p class="subheading">Bersama Hasil Karya, kami telah membantu berbagai klien mewujudkan visi mereka menjadi kenyataan</p>
-        
-        <div id="projectCarousel" class="carousel slide">
-            <div class="carousel-inner">
-                <!-- Slide Pertama -->
-                <div class="carousel-item active">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Baris 1 -->
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Perencanaan dan Survey Topografi">
-                                    <div class="project-title">Perencanaan dan Survey Topografi</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Pemancangan Pondasi">
-                                    <div class="project-title">Pemancangan Pondasi</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Cut and Fill Lahan">
-                                    <div class="project-title">Cut and Fill Lahan</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            
-                            <!-- Baris 2 -->
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Pembangunan Gedung">
-                                    <div class="project-title">Pembangunan Gedung</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Pembangunan Jalan dan Jembatan">
-                                    <div class="project-title">Pembangunan Jalan dan Jembatan</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Pembangunan Dam">
-                                    <div class="project-title">Pembangunan Dam</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            
-                            <!-- Baris 3 -->
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Pemasangan dan Fabrikasi Baja">
-                                    <div class="project-title">Pemasangan dan Fabrikasi Baja</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Instalasi pengaman Jalan Guard Raill">
-                                    <div class="project-title">Instalasi pengaman Jalan Guard Raill</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Instalasi Perpipaan HDPE dan MDPE">
-                                    <div class="project-title">Instalasi Perpipaan HDPE dan MDPE</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
+    <div class="container container-hero">
+        <div class="hero-text text-center mb-4">
+            <h2 class="hero-label" data-aos="fade-up">
+                Fuel System Membantu Anda Untuk <span class="text-highlight">Pengisian Bahan Bakar</span> yang <span class="text-highlight">Transparan</span> dan Akurat
+            </h2>
+            <p class="hero-text" data-aos="fade-up" data-aos-delay="100">
+                Fuel System Dispenser adalah sistem berbasis Internet of Things (IoT) yang dirancang untuk memastikan transparansi dan akurasi dalam proses pengisian solar. Data pengeluaran bahan bakar secara otomatis dikirim ke website SiMonRo.
+            </p>
+        </div>
+    
+        <div class="d-flex justify-content-center">
+            <div class="card card-hero">
+                <div class="fuel-description">
+                    Dengan sistem ini, pengguna dapat memonitor jumlah bahan bakar yang dikeluarkan setiap waktu, sehingga potensi kecurangan dapat diminimalkan.
+                </div>
+                
+                <div class="fuel-device text-center">
+                    <div class="fuel-device-slider">
+                        <div class="fuel-device-slide active">
+                            <img src="../public/fuel-system/fuel-system-box1.png" alt="Fuel System Device">
+                        </div>
+                        <div class="fuel-device-slide">
+                            <img src="../public/fuel-system/fuel-box-preview.png" alt="Fuel System Preview">
                         </div>
                     </div>
                 </div>
                 
-                <!-- Slide Kedua (contoh slide lain) -->
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Baris lain dengan proyek-proyek berbeda -->
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Pembangunan Bendungan">
-                                    <div class="project-title">Pembangunan Bendungan</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Konstruksi Terowongan">
-                                    <div class="project-title">Konstruksi Terowongan</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Pembangunan Pelabuhan">
-                                    <div class="project-title">Pembangunan Pelabuhan</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            
-                            <!-- Baris lain lainnya... -->
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Pembangunan Bandara">
-                                    <div class="project-title">Pembangunan Bandara</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Pembangunan Stadion">
-                                    <div class="project-title">Pembangunan Stadion</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Pembangunan Hotel">
-                                    <div class="project-title">Pembangunan Hotel</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            
-                            <!-- Dan baris lain lagi... -->
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Pembangunan Mall">
-                                    <div class="project-title">Pembangunan Mall</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Pembangunan Taman Kota">
-                                    <div class="project-title">Pembangunan Taman Kota</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="project-card">
-                                    <img src="/api/placeholder/400/300" alt="Reklamasi Pantai">
-                                    <div class="project-title">Reklamasi Pantai</div>
-                                    <button class="image-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                <div class="preview-container">
+                    <div class="preview-image-box active" onclick="selectSlide(0)">
+                        <img src="../public/fuel-system/fuel-box-preview1.png" alt="Preview 1">
+                    </div>
+                    <div class="preview-image-box" onclick="selectSlide(1)">
+                        <img src="../public/fuel-system/fuel-box-preview.png" alt="Preview 2">
                     </div>
                 </div>
-            </div>
-            
-            <!-- Tombol kontrol carousel -->
-            <div class="controls-container">
-                <button class="control-button prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-                    ←
-                </button>
-                <button class="control-button next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-                    →
-                </button>
+                
+                <div class="feature-tags">
+                    <div class="feature-tag rfid-tag">
+                        <img src="../public/fuel-system/icon.png" alt="RFID Icon" class="feature-icon">
+                        Penggunaan Kartu RFID
+                    </div>
+                    
+                    <div class="feature-tag realtime-tag">
+                        <img src="../public/fuel-system/icon.png" alt="Realtime Icon" class="feature-icon">
+                        Data Realtime
+                    </div>
+                    
+                    <div class="feature-tag risk-tag">
+                        <img src="../public/fuel-system/icon.png" alt="Risk Icon" class="feature-icon">
+                        Mengurangi Resiko Kecurangan
+                    </div>
+                </div>
+                
+                <div class="nav-controls">
+                    <button class="nav-dot prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-dot next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </div>
         </div>
     </div>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -954,5 +954,8 @@ nav,
 .card-usage {
   margin-bottom: 20px;
 }
+.card-body-interest {
+  margin-top: 2rem;
+}
 }
 

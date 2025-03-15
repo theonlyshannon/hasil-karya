@@ -6,77 +6,133 @@
 
 body {
     margin: 0;
-    height: 100vh; /* Agar body memenuhi seluruh tinggi layar */
-    background-image: url('../public/login/background-image.png'); /* Periksa path gambar */
-    background-size: cover; /* Mengatur gambar agar menutupi seluruh layar */
-    background-position: center; /* Menempatkan gambar di tengah */
-    display: flex; /* Menggunakan flexbox untuk tata letak */
-    align-items: center; /* Menempatkan konten secara vertikal di tengah */
-    justify-content: center; /* Menempatkan konten secara horizontal di tengah */
-    font-family: 'Poppins', sans-serif; /* Font yang Anda gunakan */
+    min-height: 100vh;
+    background-image: url('../public/login/background-image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .form-container {
-    background-color: rgba(255, 255, 255, 0.1); /* Warna latar belakang form dengan transparansi */
-    padding: 25px;
-    border-radius: 8px; /* Membuat sudut form menjadi melengkung */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan bayangan pada form */
-    max-width: 400px;
-    height: auto;
+    background-color: rgba(46, 140, 147, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid white;
     width: 100%;
+    
+    max-width: 400px;
+    margin: 15px auto;
 }
- 
-.form-label { 
-    color: #fff;
+
+.logo-image {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.login-title {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.form-label {
+    color: white;
     font-weight: 400;
+    font-size: 20px;
 }
-
-#email:focus {
-    background-color: transparent; /* Background menjadi transparan saat diklik */
-    border-color: white; /* Warna border tetap putih */
-    outline: none; /* Menghapus outline default */
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); 
-    color: white; /* Memastikan teks tetap putih saat diketik */
-}
-
-#email::placeholder {
-    color: white; /* Placeholder berwarna putih */
-}
-
-#password:focus {
-    background-color: transparent; /* Background menjadi transparan saat diklik */
-    border-color: white; /* Warna border tetap putih */
-    outline: none; /* Menghapus outline default */
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); 
-    color: white; /* Memastikan teks tetap putih saat diketik */
-}
-
-#password::placeholder {
-    color: white; /* Placeholder berwarna putih */
-}
-
 
 .form-control {
-    background-color: rgba(255, 255, 255, 0.1); 
-    border: 2px solid white;
-}
-.form-control {
-    color: rgba(255, 255, 255, 0.6); /* Placeholder transparan */
-    opacity: 0.8; 
-}
-.btn-custom {
-    background-color: #fff;
-    color: #2E8C93;
-    border: none;
-    padding: 8px 24px;
-    border-radius: 4px;
-    font-weight: 500;
-    padding: 12px 18px;
-  }
-  
-  .btn-custom:hover {
+    background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid white;
     color: white;
-  }
-  
+    height: 45px;
+    font-size: 1rem;
+    padding: 8px 12px;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: white;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-custom {
+    background-color: white;
+    color: #2E8C93;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+/* Media queries untuk responsivitas */
+@media (max-width: 576px) {
+    .form-container {
+        padding: 15px;
+        max-width: 90%;
+    }
+    
+    .logo-image {
+        width: 100px;
+    }
+    
+    .login-title {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .form-control {
+        height: 40px;
+        font-size: 0.85rem;
+    }
+    
+    .btn-custom {
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .form-container {
+        padding: 12px;
+    }
+    
+    .logo-image {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+    
+    .login-title {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+}

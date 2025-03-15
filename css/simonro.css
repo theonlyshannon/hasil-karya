@@ -623,7 +623,8 @@ nav,
     align-items: center;
     gap: 8px;
     box-shadow: 4px 30px 115px -1px rgba(0,0,0,0.15);
-    margin-top: 40px;
+    margin-top: 4.5rem;
+    margin-left: 7rem;
   }
   .admin-label {
     background: #fff;
@@ -1069,13 +1070,15 @@ nav,
 .gate-bridge-text {
   background: #fff;
   height: 60px;
-  padding: 1rem;
+  width: 300px;
   border-radius: 16px;
   font-size: 13px;
   display: flex;
   align-items: center;
   gap: 8px;
   box-shadow: 4px 30px 115px -1px rgba(0,0,0,0.15);
+  margin-top: 4.5rem;
+  margin-left: 0;
 }
 
 .card-title {
