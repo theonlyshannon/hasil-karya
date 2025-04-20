@@ -266,6 +266,41 @@ nav,
   border-radius: 4px;
 }
 
+.marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+  gap: 50px;
+  align-items: center;
+}
+
+.marquee-content img {
+  height: 70px;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.marquee-content img.pp-logo {
+  height: 160px;
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}
+
+
 /* Mobile styles */
 @media (max-width: 991.98px) {
   nav, .navbar {
@@ -745,6 +780,10 @@ nav,
     max-width: 1200px;
     margin: 0 auto;
     font-family: 'poppins';
+    background-image: url('../public/index/background-divisi-it.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .heading {
